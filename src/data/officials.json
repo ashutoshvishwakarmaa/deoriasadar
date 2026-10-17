@@ -1,0 +1,182 @@
+[
+  {
+    "role": {
+      "en": "Member of Parliament · Deoria",
+      "hi": "सांसद · देवरिया"
+    },
+    "name": {
+      "en": "Shashank Mani Tripathi",
+      "hi": "शशांक मणि त्रिपाठी"
+    },
+    "meta": {
+      "en": "BJP · elected 2024",
+      "hi": "भाजपा · 2024"
+    },
+    "verified": true
+  },
+  {
+    "role": {
+      "en": "Member of Parliament · Salempur",
+      "hi": "सांसद · सलेमपुर"
+    },
+    "name": {
+      "en": "Ramashankar Rajbhar",
+      "hi": "रमाशंकर राजभर"
+    },
+    "meta": {
+      "en": "SP · elected 2024 · covers Bhatpar Rani, Salempur",
+      "hi": "सपा · 2024 · भाटपार रानी, सलेमपुर"
+    },
+    "verified": true
+  },
+  {
+    "role": {
+      "en": "MLA · Deoria (337)",
+      "hi": "विधायक · देवरिया (337)"
+    },
+    "name": {
+      "en": "Shalabh Mani Tripathi",
+      "hi": "शलभ मणि त्रिपाठी"
+    },
+    "meta": {
+      "en": "BJP · elected 2022",
+      "hi": "भाजपा · 2022"
+    },
+    "verified": true
+  },
+  {
+    "role": {
+      "en": "MLA · Pathardeva (338)",
+      "hi": "विधायक · पथरदेवा (338)"
+    },
+    "name": {
+      "en": "Surya Pratap Shahi",
+      "hi": "सूर्य प्रताप शाही"
+    },
+    "meta": {
+      "en": "BJP · elected 2022",
+      "hi": "भाजपा · 2022"
+    },
+    "verified": true
+  },
+  {
+    "role": {
+      "en": "MLA · Rampur Karkhana (339)",
+      "hi": "विधायक · रामपुर कारखाना (339)"
+    },
+    "name": {
+      "en": "Surendra Chaurasia",
+      "hi": "सुरेंद्र चौरसिया"
+    },
+    "meta": {
+      "en": "BJP · elected 2022",
+      "hi": "भाजपा · 2022"
+    },
+    "verified": true
+  },
+  {
+    "role": {
+      "en": "MLA · Bhatpar Rani (340)",
+      "hi": "विधायक · भाटपार रानी (340)"
+    },
+    "name": {
+      "en": "Sabhakunwar Kushwaha",
+      "hi": "सभाकुंवर कुशवाहा"
+    },
+    "meta": {
+      "en": "BJP · elected 2022",
+      "hi": "भाजपा · 2022"
+    },
+    "verified": true
+  },
+  {
+    "role": {
+      "en": "MLA · Salempur (341)",
+      "hi": "विधायक · सलेमपुर (341)"
+    },
+    "name": {
+      "en": "Vijay Laxmi Gautam",
+      "hi": "विजय लक्ष्मी गौतम"
+    },
+    "meta": {
+      "en": "BJP · elected 2022",
+      "hi": "भाजपा · 2022"
+    },
+    "verified": true
+  },
+  {
+    "role": {
+      "en": "MLA · Rudrapur (336)",
+      "hi": "विधायक · रुद्रपुर (336)"
+    },
+    "name": {
+      "en": "Jai Prakash Nishad",
+      "hi": "जय प्रकाश निषाद"
+    },
+    "meta": {
+      "en": "BJP · elected 2022",
+      "hi": "भाजपा · 2022"
+    },
+    "verified": true
+  },
+  {
+    "role": {
+      "en": "MLA · Barhaj (342)",
+      "hi": "विधायक · बरहज (342)"
+    },
+    "name": {
+      "en": "Deepak Mishra",
+      "hi": "दीपक मिश्र"
+    },
+    "meta": {
+      "en": "BJP · elected 2022",
+      "hi": "भाजपा · 2022"
+    },
+    "verified": true
+  },
+  {
+    "role": {
+      "en": "District Magistrate",
+      "hi": "ज़िलाधिकारी"
+    },
+    "name": {
+      "en": "Madhusudan Hulgi, IAS",
+      "hi": "मधुसूदन हुल्गी, आईएएस"
+    },
+    "meta": {
+      "en": "Reported appointed May 2026; official site still lists previous DM",
+      "hi": "मई 2026 में नियुक्ति की सूचना; आधिकारिक साइट पर अभी पूर्व ज़िलाधिकारी"
+    },
+    "verified": true
+  },
+  {
+    "role": {
+      "en": "Chairperson · Nagar Palika",
+      "hi": "अध्यक्ष · नगर पालिका"
+    },
+    "name": {
+      "en": "Alka Singh",
+      "hi": "अलका सिंह"
+    },
+    "meta": {
+      "en": "Deoria Nagar Palika Parishad",
+      "hi": "देवरिया नगर पालिका परिषद"
+    },
+    "verified": true
+  },
+  {
+    "role": {
+      "en": "Executive Officer · Nagar Palika",
+      "hi": "अधिशासी अधिकारी · नगर पालिका"
+    },
+    "name": {
+      "en": "To be confirmed",
+      "hi": "पुष्टि शेष"
+    },
+    "meta": {
+      "en": "Collect from Nagar Palika office",
+      "hi": "नगर पालिका कार्यालय से"
+    },
+    "verified": false
+  }
+]

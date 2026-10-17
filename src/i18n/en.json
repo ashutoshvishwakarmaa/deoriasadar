@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "title": "Deoria City Guide — temples, trains, hospitals and helplines",
+    "description": "Devaranya, the forest of the gods. A complete, verified guide to Deoria for visitors, new residents and students."
+  },
+  "brand": "Deoria Guide",
+  "nav": {
+    "explore": "Explore",
+    "history": "History",
+    "people": "People",
+    "governance": "Governance",
+    "transport": "Getting around",
+    "map": "Map",
+    "emergency": "Emergency",
+    "culture": "Culture",
+    "gallery": "Gallery",
+    "about": "About this guide",
+    "menu": "Menu",
+    "close": "Close",
+    "skip": "Skip to content"
+  },
+  "home": {
+    "kicker": "Uttar Pradesh · Gorakhpur division",
+    "estBadge": "Est. 1946",
+    "heroBig": "Deoria",
+    "heroSmall": "देवरिया",
+    "heroSub": "Devaranya, the forest of the gods. A complete guide to the city for visitors, new residents and students.",
+    "startHere": "Start here",
+    "viewAll": "View all"
+  },
+  "search": {
+    "placeholder": "Search temples, trains, hospitals…",
+    "button": "Search",
+    "title": "Search",
+    "resultsFor": "Results for",
+    "noResults": "Nothing matched. Try another spelling, or ask the assistant.",
+    "empty": "Type at least two letters to search.",
+    "loading": "Searching…",
+    "error": "Search is not working right now. Please check your connection and try again.",
+    "rateLimited": "Too many searches in a short time. Please wait a minute and try again.",
+    "retry": "Try again",
+    "types": {
+      "place": "Place",
+      "person": "Person",
+      "official": "Official",
+      "emergency": "Helpline",
+      "transport": "Transport",
+      "history": "History"
+    }
+  },
+  "sections": {
+    "places": "Places worth the journey",
+    "nameKicker": "Origin of the name",
+    "timeline": "A short history",
+    "people": "People of Deoria",
+    "governance": "Who represents Deoria",
+    "transport": "Getting here and around",
+    "map": "Map",
+    "emergency": "Emergency numbers",
+    "emergencyNote": "Tap a number to call. This page works offline once you have opened it.",
+    "culture": "Festivals and culture",
+    "gallery": "Gallery",
+    "galleryNote": "Photos are being collected from residents with credit and licence. Want to contribute? Use the form on the About page."
+  },
+  "place": {
+    "back": "All places",
+    "distance": "Distance from city",
+    "area": "Area",
+    "tips": "Good to know",
+    "directions": "Get directions",
+    "approxLocation": "Approximate location",
+    "notMapped": "Exact location not yet mapped",
+    "verifiedOn": "Last verified",
+    "unverified": "Not yet verified",
+    "sources": "Sources",
+    "callOffice": "Call"
+  },
+  "badges": {
+    "verified": "Verified",
+    "recheck": "Re-check"
+  },
+  "map": {
+    "layers": {
+      "faith": "Faith",
+      "health": "Health",
+      "transport": "Transport",
+      "offices": "Offices",
+      "education": "Education"
+    },
+    "loading": "Loading map…",
+    "unmapped": "Not yet on the map"
+  },
+  "emergency": {
+    "tap": "Tap to call"
+  },
+  "about": {
+    "title": "About this guide",
+    "intro": "Facts in this guide come from public records. Each entry shows when it was last checked. Items marked “Re-check” are waiting for confirmation.",
+    "sources": "Sources used",
+    "correctionTitle": "Suggest a correction",
+    "correctionIntro": "Spotted a wrong phone number, name or timing? Tell us and an editor will check it.",
+    "form": {
+      "page": "Which page or entry?",
+      "message": "What should change?",
+      "contact": "Your email or phone (optional)",
+      "submit": "Send correction",
+      "sending": "Sending…",
+      "success": "Thank you. An editor will review your correction.",
+      "error": "Could not send right now. Please try again in a minute."
+    }
+  },
+  "footer": {
+    "sourced": "Content sourced from public records. Last verified 28 Sep 2026.",
+    "suggest": "Suggest a correction →"
+  },
+  "chat": {
+    "open": "Ask about Deoria",
+    "title": "Deoria assistant",
+    "subtitle": "Answers from this guide’s verified data",
+    "placeholder": "Ask about temples, trains, offices…",
+    "send": "Send",
+    "close": "Close chat",
+    "reset": "New chat",
+    "greeting": "Namaste! Ask me anything about Deoria — places to visit, trains, government offices or helplines. I answer in English or Hindi.",
+    "thinking": "Looking it up…",
+    "error": "Sorry, something went wrong. Please try again.",
+    "rateLimited": "You are sending messages too quickly. Please wait a minute.",
+    "unavailable": "The assistant is not available right now. For emergencies call 112.",
+    "disclaimer": "AI answers can be wrong. For emergencies, call 112.",
+    "suggestions": [
+      "How do I reach Deoria by train?",
+      "Which temples should I visit?",
+      "What is the DM office number?",
+      "देवरिया में आपातकालीन नंबर क्या हैं?"
+    ]
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "This page does not exist. Try the search or go back home.",
+    "home": "Back to home"
+  },
+  "photos": {
+    "photoBy": "Photo",
+    "credits": "Photo credits",
+    "creditsIntro": "Photos are from Wikimedia Commons, used under their free licences and resized for the web. Want to add your own photo of Deoria? Use the correction form.",
+    "noPhoto": "Photo coming soon"
+  }
+}

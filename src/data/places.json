@@ -1,0 +1,429 @@
+[
+  {
+    "slug": "dugdheshwar-nath-mandir",
+    "categories": ["faith"],
+    "featured": true,
+    "name": {
+      "en": "Dugdheshwar Nath Mandir",
+      "hi": "दुग्धेश्वर नाथ मंदिर"
+    },
+    "aliases": ["dudheshwar", "dudheswar", "dugdheswar", "dugdheshwarnath", "rudrapur shiv mandir"],
+    "area": {
+      "en": "Rudrapur",
+      "hi": "रुद्रपुर"
+    },
+    "distance": {
+      "en": "~35 km",
+      "hi": "~35 किमी"
+    },
+    "summary": {
+      "en": "An old Shiva temple 2 km north of Rudrapur town, set in about 20 acres. Tradition holds it was founded by the Rudrapur rulers.",
+      "hi": "रुद्रपुर नगर से 2 किमी उत्तर, लगभग 20 एकड़ में फैला प्राचीन शिव मंदिर। मान्यता है कि इसकी स्थापना रुद्रपुर नरेश ने की।"
+    },
+    "tips": {
+      "en": "Busiest during Sawan, when thousands of devotees come for jalabhishek. Arrive early on Mondays in Sawan.",
+      "hi": "सावन में सबसे अधिक भीड़ रहती है, जब हज़ारों श्रद्धालु जलाभिषेक के लिए आते हैं। सावन के सोमवार को जल्दी पहुँचें।"
+    },
+    "photo": "temple exterior",
+    "coords": [26.4705, 83.6118],
+    "coordsApprox": true,
+    "verified": "2026-09-28",
+    "sources": ["deoria-tourist-places"],
+    "photoId": "dugdheshwar-nath-gate"
+  },
+  {
+    "slug": "devraha-baba-ashram",
+    "categories": ["faith"],
+    "featured": true,
+    "name": {
+      "en": "Devraha Baba Ashram",
+      "hi": "देवरहा बाबा आश्रम"
+    },
+    "aliases": ["devraha", "deoraha", "devrahababa", "mail ashram"],
+    "area": {
+      "en": "Mail, on the Saryu",
+      "hi": "मईल, सरयू तट"
+    },
+    "distance": {
+      "en": "~40 km",
+      "hi": "~40 किमी"
+    },
+    "summary": {
+      "en": "Where the yogi Devraha Baba lived on a wooden machan by the Saryu river, before moving to Vrindavan.",
+      "hi": "सरयू तट पर वह स्थान जहाँ योगी देवरहा बाबा लकड़ी के मचान पर रहते थे।"
+    },
+    "photo": "riverbank ashram",
+    "verified": "2026-09-28",
+    "sources": ["deoria-tourist-places"],
+    "photoId": "devraha-baba"
+  },
+  {
+    "slug": "hanuman-mandir",
+    "categories": ["faith"],
+    "featured": true,
+    "name": {
+      "en": "Hanuman Mandir",
+      "hi": "हनुमान मंदिर"
+    },
+    "aliases": ["hanuman", "raghav nagar mandir", "siddh hanuman"],
+    "area": {
+      "en": "Raghav Nagar",
+      "hi": "राघव नगर"
+    },
+    "distance": {
+      "en": "In city",
+      "hi": "शहर में"
+    },
+    "summary": {
+      "en": "A ‘siddh’ temple surrounded by a large pond. Crowds gather every Tuesday.",
+      "hi": "बड़े तालाब से घिरा सिद्ध मंदिर। हर मंगलवार भारी भीड़ रहती है।"
+    },
+    "photo": "temple and pond",
+    "verified": "2026-09-28",
+    "sources": ["deoria-tourist-places"],
+    "photoId": "hanuman-ji-raghav-nagar"
+  },
+  {
+    "slug": "bade-hanuman-mandir",
+    "categories": ["faith"],
+    "featured": true,
+    "name": {
+      "en": "Bade Hanuman Mandir",
+      "hi": "बड़े हनुमान मंदिर"
+    },
+    "aliases": [
+      "bada hanuman",
+      "bade hanuman ji",
+      "sankat mochan",
+      "sankatmochan",
+      "sudama chauraha",
+      "ramlaxan",
+      "ramlakhan",
+      "bajrang"
+    ],
+    "area": {
+      "en": "Near Sudama Chauraha, Ramlaxan",
+      "hi": "सुदामा चौराहा के पास, रामलखन"
+    },
+    "distance": {
+      "en": "In city",
+      "hi": "शहर में"
+    },
+    "summary": {
+      "en": "A Hanuman temple near Sudama Chauraha on the Ramlaxan side of the city, one of Deoria’s well-known places of worship for Hanuman ji’s devotees.",
+      "hi": "शहर के रामलखन की ओर सुदामा चौराहा के पास स्थित हनुमान मंदिर, देवरिया में हनुमान जी के भक्तों के प्रमुख पूजा स्थलों में से एक।"
+    },
+    "photo": "temple entrance",
+    "verified": null,
+    "sources": [],
+    "photoId": "bade-hanuman-ji"
+  },
+  {
+    "slug": "baripur-mandir",
+    "categories": ["faith"],
+    "featured": true,
+    "name": {
+      "en": "Baripur Mandir (Hanuman ji)",
+      "hi": "बरीपुर मंदिर (हनुमान जी)"
+    },
+    "aliases": ["baripur", "bareepur", "baripur hanuman", "ranighat", "barhaj road mandir"],
+    "area": {
+      "en": "Baripur, Ranighat · Deoria–Barhaj Road",
+      "hi": "बरीपुर, रानीघाट · देवरिया–बरहज मार्ग"
+    },
+    "distance": {
+      "en": "Near city",
+      "hi": "शहर के पास"
+    },
+    "summary": {
+      "en": "A popular Hanuman ji temple at Baripur on the Deoria–Barhaj road. Daily aarti draws devotees in the early morning and evening.",
+      "hi": "देवरिया–बरहज मार्ग पर बरीपुर स्थित लोकप्रिय हनुमान जी का मंदिर। सुबह और शाम की आरती में श्रद्धालु बड़ी संख्या में आते हैं।"
+    },
+    "photo": "temple shrine",
+    "verified": null,
+    "sources": [],
+    "photoId": "baripur-hanuman-ji"
+  },
+  {
+    "slug": "durga-somnath-mandir",
+    "categories": ["faith"],
+    "featured": true,
+    "name": {
+      "en": "Durga & Somnath Mandir",
+      "hi": "दुर्गा व सोमनाथ मंदिर"
+    },
+    "aliases": ["durga mandir", "somnath", "kasia road mandir"],
+    "area": {
+      "en": "Kasia Road",
+      "hi": "कसया रोड"
+    },
+    "distance": {
+      "en": "In city",
+      "hi": "शहर में"
+    },
+    "summary": {
+      "en": "Two neighbouring temples on Kasia Road, busiest during Navratri.",
+      "hi": "कसया रोड पर पास-पास स्थित दो मंदिर, नवरात्रि में सबसे अधिक भीड़।"
+    },
+    "photo": "temple courtyard",
+    "verified": "2026-09-28",
+    "sources": ["deoria-tourist-places"],
+    "photoId": "baba-somnath-mandir"
+  },
+  {
+    "slug": "balaji-mandir",
+    "categories": ["faith"],
+    "featured": false,
+    "name": {
+      "en": "Balaji Mandir",
+      "hi": "बालाजी मंदिर"
+    },
+    "aliases": [
+      "balaji temple",
+      "venkateshwar mandir",
+      "venkatesh mandir",
+      "lakshmi venkatesh",
+      "tirupati balaji",
+      "बालाजी",
+      "वेंकटेश"
+    ],
+    "area": {
+      "en": "Deoria city",
+      "hi": "देवरिया शहर"
+    },
+    "distance": {
+      "en": "In city",
+      "hi": "शहर में"
+    },
+    "summary": {
+      "en": "A South Indian-style temple of Balaji (Venkateshwara), recognisable by its tall, brightly painted gopuram over the entrance.",
+      "hi": "बालाजी (वेंकटेश्वर) का दक्षिण भारतीय शैली का मंदिर, जो प्रवेश द्वार पर बने ऊँचे, रंग-बिरंगे गोपुरम से पहचाना जाता है।"
+    },
+    "tips": {
+      "en": "The entrance tower is carved and painted with figures of deities in many colours, and is best photographed in the soft light of early morning or evening. Check the temple's own notice for aarti and darshan timings.",
+      "hi": "प्रवेश द्वार का मीनार देवी-देवताओं की रंगीन मूर्तियों से सजा है और सुबह या शाम की नरम रोशनी में फ़ोटो के लिए सबसे अच्छा लगता है। आरती और दर्शन का समय मंदिर की सूचना से पूछ लें।"
+    },
+    "photo": "temple gopuram",
+    "verified": null,
+    "sources": [],
+    "photoId": "balaji-mandir"
+  },
+  {
+    "slug": "maharshi-devraha-baba-medical-college",
+    "categories": ["health", "education"],
+    "name": {
+      "en": "Maharshi Devraha Baba Medical College",
+      "hi": "महर्षि देवरहा बाबा मेडिकल कॉलेज"
+    },
+    "aliases": ["medical college", "mbbs", "autonomous state medical college"],
+    "area": {
+      "en": "Deoria",
+      "hi": "देवरिया"
+    },
+    "summary": {
+      "en": "Maharshi Devraha Baba Autonomous State Medical College, Deoria. The district hospital is linked to it.",
+      "hi": "महर्षि देवरहा बाबा स्वशासी राज्य चिकित्सा महाविद्यालय, देवरिया। ज़िला अस्पताल इससे संबद्ध है।"
+    },
+    "verified": "2026-09-28",
+    "sources": ["wiki-district"],
+    "photoId": "devaraha-baba-medical-college"
+  },
+  {
+    "slug": "district-hospital",
+    "categories": ["health"],
+    "name": {
+      "en": "District hospital",
+      "hi": "ज़िला अस्पताल"
+    },
+    "aliases": ["hospital", "sadar aspatal", "government hospital"],
+    "area": {
+      "en": "Linked to the medical college",
+      "hi": "मेडिकल कॉलेज से संबद्ध"
+    },
+    "summary": {
+      "en": "The main government hospital, now linked to the medical college. Verified phone numbers are still being collected.",
+      "hi": "मुख्य सरकारी अस्पताल, अब मेडिकल कॉलेज से संबद्ध। सत्यापित फ़ोन नंबर अभी एकत्र किए जा रहे हैं।"
+    },
+    "verified": null,
+    "sources": ["wiki-district"]
+  },
+  {
+    "slug": "blood-bank",
+    "categories": ["health"],
+    "name": {
+      "en": "Blood bank",
+      "hi": "ब्लड बैंक"
+    },
+    "aliases": ["blood", "rakt kosh"],
+    "area": {
+      "en": "To be verified",
+      "hi": "सत्यापन शेष"
+    },
+    "summary": {
+      "en": "Location and contact number are not yet verified. Call 108 or the district hospital in an emergency.",
+      "hi": "स्थान और संपर्क नंबर अभी सत्यापित नहीं हैं। आपात स्थिति में 108 या ज़िला अस्पताल से संपर्क करें।"
+    },
+    "verified": null,
+    "sources": []
+  },
+  {
+    "slug": "deoria-sadar-station",
+    "categories": ["transport"],
+    "name": {
+      "en": "Deoria Sadar station",
+      "hi": "देवरिया सदर स्टेशन"
+    },
+    "aliases": ["deos", "railway station", "station", "rail"],
+    "area": {
+      "en": "DEOS · city centre",
+      "hi": "DEOS · शहर का केंद्र"
+    },
+    "summary": {
+      "en": "North Eastern Railway station in the city centre, with direct trains from Delhi, Mumbai, Kolkata, Lucknow and Varanasi.",
+      "hi": "शहर के केंद्र में पूर्वोत्तर रेलवे का स्टेशन। दिल्ली, मुंबई, कोलकाता, लखनऊ और वाराणसी से सीधी ट्रेनें।"
+    },
+    "coords": [26.5056, 83.7813],
+    "coordsApprox": true,
+    "verified": "2026-09-28",
+    "sources": ["deoria-how-to-reach"],
+    "photoId": "deoria-sadar-station"
+  },
+  {
+    "slug": "bhatni-junction",
+    "categories": ["transport"],
+    "name": {
+      "en": "Bhatni Junction",
+      "hi": "भटनी जंक्शन"
+    },
+    "aliases": ["btt", "bhatni"],
+    "area": {
+      "en": "BTT",
+      "hi": "BTT"
+    },
+    "summary": {
+      "en": "Junction station near Deoria with more train connections.",
+      "hi": "देवरिया के पास जंक्शन स्टेशन, जहाँ से अधिक ट्रेनें मिलती हैं।"
+    },
+    "coords": [26.3897, 83.9306],
+    "coordsApprox": true,
+    "verified": "2026-09-28",
+    "sources": ["deoria-how-to-reach"]
+  },
+  {
+    "slug": "roadways-bus-stand",
+    "categories": ["transport"],
+    "name": {
+      "en": "Roadways bus stand",
+      "hi": "रोडवेज़ बस अड्डा"
+    },
+    "aliases": ["upsrtc", "bus", "bus stand", "roadways"],
+    "area": {
+      "en": "UPSRTC",
+      "hi": "UPSRTC"
+    },
+    "summary": {
+      "en": "State buses to Gorakhpur, Kushinagar, Lucknow and towns across the Bihar border.",
+      "hi": "गोरखपुर, कुशीनगर, लखनऊ और बिहार सीमा के कस्बों के लिए बसें।"
+    },
+    "verified": "2026-09-28",
+    "sources": ["deoria-how-to-reach"]
+  },
+  {
+    "slug": "collectorate",
+    "categories": ["offices"],
+    "name": {
+      "en": "Collectorate",
+      "hi": "कलेक्ट्रेट"
+    },
+    "aliases": ["dm office", "district magistrate", "kalektret", "collector"],
+    "area": {
+      "en": "DM office · 05568-222316",
+      "hi": "ज़िलाधिकारी कार्यालय · 05568-222316"
+    },
+    "summary": {
+      "en": "District Magistrate’s office, Collectorate Campus. Office phone: 05568-222316.",
+      "hi": "ज़िलाधिकारी कार्यालय, कलेक्ट्रेट परिसर। कार्यालय फ़ोन: 05568-222316।"
+    },
+    "phone": "05568-222316",
+    "verified": "2026-09-28",
+    "sources": ["deoria-history"]
+  },
+  {
+    "slug": "nagar-palika-parishad",
+    "categories": ["offices"],
+    "name": {
+      "en": "Nagar Palika Parishad",
+      "hi": "नगर पालिका परिषद"
+    },
+    "aliases": ["nagar palika", "municipality", "property tax", "birth certificate", "death certificate", "water"],
+    "area": {
+      "en": "Civic services",
+      "hi": "नागरिक सेवाएँ"
+    },
+    "summary": {
+      "en": "Property tax, water, birth and death certificates, and ward complaints for the city.",
+      "hi": "शहर के लिए गृहकर, जल, जन्म-मृत्यु प्रमाणपत्र और वार्ड शिकायतें।"
+    },
+    "verified": "2026-09-28",
+    "sources": ["wiki-district"]
+  },
+  {
+    "slug": "district-sessions-court",
+    "categories": ["offices"],
+    "name": {
+      "en": "District & Sessions Court",
+      "hi": "ज़िला एवं सत्र न्यायालय"
+    },
+    "aliases": ["court", "kachahari", "nyayalaya"],
+    "area": {
+      "en": "Est. 12 Sep 1946",
+      "hi": "स्थापना 12 सितंबर 1946"
+    },
+    "summary": {
+      "en": "The district court, established on 12 September 1946.",
+      "hi": "ज़िला न्यायालय, 12 सितंबर 1946 को स्थापित।"
+    },
+    "verified": "2026-09-28",
+    "sources": ["deoria-history"]
+  },
+  {
+    "slug": "baba-raghav-das-pg-college",
+    "categories": ["education"],
+    "name": {
+      "en": "Baba Raghav Das PG College",
+      "hi": "बाबा राघव दास पीजी कॉलेज"
+    },
+    "aliases": ["brd college", "brd pg college", "degree college"],
+    "area": {
+      "en": "Degree college",
+      "hi": "डिग्री कॉलेज"
+    },
+    "summary": {
+      "en": "Postgraduate degree college in Deoria city.",
+      "hi": "देवरिया शहर का स्नातकोत्तर डिग्री कॉलेज।"
+    },
+    "verified": "2026-09-28",
+    "sources": ["wiki-district"],
+    "photoId": "brd-pg-college"
+  },
+  {
+    "slug": "gic-deoria",
+    "categories": ["education"],
+    "name": {
+      "en": "GIC Deoria",
+      "hi": "जीआईसी देवरिया"
+    },
+    "aliases": ["government inter college", "gic", "rajkiya inter college"],
+    "area": {
+      "en": "Government Inter College",
+      "hi": "राजकीय इंटर कॉलेज"
+    },
+    "summary": {
+      "en": "Government Inter College (GIC), Deoria.",
+      "hi": "राजकीय इंटर कॉलेज (GIC), देवरिया।"
+    },
+    "verified": "2026-09-28",
+    "sources": ["wiki-district"],
+    "photoId": "gic-deoria-front"
+  }
+]

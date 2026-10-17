@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+/* Design tokens from the Deoria City Guide design (claude.ai/design). */
+@theme {
+  --color-paper: #f6f4ef;
+  --color-paper-2: #f0ede6;
+  --color-sand: #ebe7de;
+  --color-sage: #e6e9e3;
+  --color-ink: #1a1813;
+  --color-ink-2: #3d3932;
+  --color-muted: #57524a;
+  --color-muted-2: #6b665c;
+  --color-faint: #8a8478;
+  --color-night-muted: #b9b3a7;
+  --color-accent: oklch(0.58 0.16 40);
+  --color-ok-bg: oklch(0.94 0.04 150);
+  --color-ok-fg: oklch(0.4 0.1 150);
+  --color-warn-bg: oklch(0.94 0.05 60);
+  --color-warn-fg: oklch(0.45 0.12 50);
+
+  --font-sans: var(--font-poppins), system-ui, sans-serif;
+  --font-mono: ui-monospace, Menlo, monospace;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  ::selection {
+    background: oklch(0.58 0.16 40 / 0.25);
+  }
+}
+
+@utility hatch {
+  background-color: var(--color-sand);
+  background-image: repeating-linear-gradient(135deg, rgb(26 24 19 / 0.05) 0 1px, transparent 1px 11px);
+}
+
+@utility hatch-fine {
+  background-color: var(--color-sand);
+  background-image: repeating-linear-gradient(135deg, rgb(26 24 19 / 0.06) 0 1px, transparent 1px 7px);
+}
+
+@utility section-title {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+}
+
+/*
+ * Scroll reveal with CSS scroll-driven animations: no JavaScript touches the DOM,
+ * so there is nothing to race React hydration. Browsers without support
+ * (and reduced-motion users) simply see the content without the animation.
+ */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    [data-reveal],
+    [data-reveal-stagger] > * {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 55%;
+    }
+    [data-reveal-stagger] > *:nth-child(3n + 2) {
+      animation-range: entry 8% entry 63%;
+    }
+    [data-reveal-stagger] > *:nth-child(3n + 3) {
+      animation-range: entry 16% entry 71%;
+    }
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgb(26 24 19 / 0.35);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgb(26 24 19 / 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgb(26 24 19 / 0);
+  }
+}
+.pulse-ring {
+  animation: pulse-ring 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.em-hint {
+  opacity: 0;
+  transform: translateY(4px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+a:hover .em-hint,
+a:focus-visible .em-hint {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.25;
+  }
+}
+.typing-dot {
+  animation: blink 1.2s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .pulse-ring,
+  .typing-dot {
+    animation: none;
+  }
+}
+
+/* Leaflet: keep map controls below the sticky header and chat panel. */
+.leaflet-container {
+  font-family: var(--font-sans);
+  z-index: 0;
+}

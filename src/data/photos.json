@@ -1,0 +1,331 @@
+[
+  {
+    "id": "hanuman-mandir-pond",
+    "src": "/images/photos/hanuman-mandir-pond-hd.jpg",
+    "width": 1662,
+    "height": 946,
+    "caption": {
+      "en": "Hanuman Mandir and its pond, Raghav Nagar, Deoria",
+      "hi": "हनुमान मंदिर और उसका तालाब, राघव नगर, देवरिया"
+    },
+    "author": "District Administration, Deoria",
+    "license": "deoria.nic.in",
+    "licenseUrl": "https://deoria.nic.in/website-policies/",
+    "sourceUrl": "https://deoria.nic.in/tourist-place/hanuman-mandir/"
+  },
+  {
+    "id": "hanuman-ji-raghav-nagar",
+    "src": "/images/photos/hanuman-ji-raghav-nagar.jpg",
+    "width": 938,
+    "height": 1999,
+    "caption": {
+      "en": "Shri Hanuman ji, Siddh Hanuman Mandir, Raghav Nagar",
+      "hi": "श्री हनुमान जी, सिद्ध हनुमान मंदिर, राघव नगर"
+    },
+    "author": "Deoria Guide",
+    "license": "Provided by site owner",
+    "licenseUrl": "https://deoria.nic.in/tourist-place/hanuman-mandir/",
+    "sourceUrl": "https://deoria.nic.in/tourist-place/hanuman-mandir/",
+    "focus": "50% 30%"
+  },
+  {
+    "id": "devraha-baba",
+    "src": "/images/photos/devraha-baba-hd.png",
+    "width": 1487,
+    "height": 1058,
+    "caption": {
+      "en": "Devraha Baba giving darshan (archival photograph, restored)",
+      "hi": "दर्शन देते देवरहा बाबा (पुरानी तस्वीर, पुनर्स्थापित)"
+    },
+    "author": "Deoria Guide",
+    "license": "Provided by site owner",
+    "licenseUrl": "https://deoria.nic.in/tourist-place/dewaraha-baba-aashram/",
+    "sourceUrl": "https://deoria.nic.in/tourist-place/dewaraha-baba-aashram/",
+    "focus": "52% 35%"
+  },
+  {
+    "id": "shyam-mandir",
+    "src": "/images/photos/shyam-mandir.jpg",
+    "width": 2400,
+    "height": 1800,
+    "caption": {
+      "en": "Shri Krishna (Shyam) Mandir, Deoria",
+      "hi": "श्री कृष्ण (श्याम) मंदिर, देवरिया"
+    },
+    "author": "Shivait",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:ShyamMandirDeoria.jpg"
+  },
+  {
+    "id": "baba-somnath-mandir",
+    "src": "/images/photos/baba-somnath-mandir.jpg",
+    "width": 1024,
+    "height": 827,
+    "caption": {
+      "en": "Shri Baba Somnath Mandir entrance, Deoria",
+      "hi": "श्री बाबा सोमनाथ मंदिर का प्रवेश द्वार, देवरिया"
+    },
+    "author": "Deoria Guide",
+    "license": "Provided by site owner",
+    "licenseUrl": "https://deoria.nic.in/tourist-places/",
+    "sourceUrl": "https://deoria.nic.in/tourist-places/",
+    "focus": "50% 40%"
+  },
+  {
+    "id": "somnath-mandir",
+    "src": "/images/photos/somnath-mandir.jpg",
+    "width": 1600,
+    "height": 1200,
+    "caption": {
+      "en": "Somnath Mandir on the Deoria–Kasia road",
+      "hi": "देवरिया–कसया मार्ग पर सोमनाथ मंदिर"
+    },
+    "author": "Shivakant Tripathi",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Somnathmandir.jpg"
+  },
+  {
+    "id": "deoria-sadar-station",
+    "src": "/images/photos/deoria-sadar-station.jpg",
+    "width": 1600,
+    "height": 1200,
+    "caption": {
+      "en": "Deoria Sadar railway station",
+      "hi": "देवरिया सदर रेलवे स्टेशन"
+    },
+    "author": "Abhijitsathe",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Deoria_Sadar_Railway_Station.jpg"
+  },
+  {
+    "id": "gayatri-mandir",
+    "src": "/images/photos/gayatri-mandir.jpg",
+    "width": 1600,
+    "height": 1200,
+    "caption": {
+      "en": "Gayatri Mandir, one of Deoria’s oldest temples",
+      "hi": "गायत्री मंदिर, देवरिया के सबसे पुराने मंदिरों में से एक"
+    },
+    "author": "Shivakant Tripathi",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:GaytriMandir.jpg"
+  },
+  {
+    "id": "baripur-hanuman-ji",
+    "src": "/images/photos/baripur-hanuman-ji.jpg",
+    "width": 1254,
+    "height": 1254,
+    "caption": {
+      "en": "Hanuman ji adorned with marigold garlands, Baripur Mandir",
+      "hi": "गेंदे की मालाओं से सजे हनुमान जी, बरीपुर मंदिर"
+    },
+    "author": "Deoria Guide",
+    "license": "Provided by site owner",
+    "licenseUrl": "https://www.youtube.com/watch?v=kxeyP495RBg",
+    "sourceUrl": "https://www.youtube.com/watch?v=kxeyP495RBg",
+    "focus": "50% 50%"
+  },
+  {
+    "id": "baripur-mandir",
+    "src": "/images/photos/baripur-mandir.jpg",
+    "width": 660,
+    "height": 508,
+    "caption": {
+      "en": "Baripur Mandir (Shri Hanuman ji), Deoria–Barhaj road",
+      "hi": "बरीपुर मंदिर (श्री हनुमान जी), देवरिया–बरहज मार्ग"
+    },
+    "author": "Desi Motard (YouTube)",
+    "license": "© creator",
+    "licenseUrl": "https://www.youtube.com/watch?v=kxeyP495RBg",
+    "sourceUrl": "https://www.youtube.com/watch?v=kxeyP495RBg"
+  },
+  {
+    "id": "bade-hanuman-ji",
+    "src": "/images/photos/bade-hanuman-ji.jpg",
+    "width": 1689,
+    "height": 931,
+    "caption": {
+      "en": "Giant Hanuman ji statue and temple, Bade Hanuman Mandir, Deoria",
+      "hi": "विशाल हनुमान जी की प्रतिमा और मंदिर, बड़े हनुमान मंदिर, देवरिया"
+    },
+    "author": "Deoria Guide",
+    "license": "Provided by site owner",
+    "licenseUrl": "https://www.youtube.com/watch?v=Q6ih9E91pG8",
+    "sourceUrl": "https://www.youtube.com/watch?v=Q6ih9E91pG8",
+    "focus": "46% 50%"
+  },
+  {
+    "id": "bade-hanuman-mandir",
+    "src": "/images/photos/bade-hanuman-mandir.jpg",
+    "width": 452,
+    "height": 480,
+    "caption": {
+      "en": "Bade Hanuman ji Mandir, Deoria",
+      "hi": "बड़े हनुमान जी मंदिर, देवरिया"
+    },
+    "author": "Tourist Places in Deoria (YouTube)",
+    "license": "© creator",
+    "licenseUrl": "https://www.youtube.com/watch?v=Q6ih9E91pG8",
+    "sourceUrl": "https://www.youtube.com/watch?v=Q6ih9E91pG8"
+  },
+  {
+    "id": "dugdheshwar-nath-gate",
+    "src": "/images/photos/dugdheshwar-nath-gate.jpg",
+    "width": 1526,
+    "height": 1030,
+    "caption": {
+      "en": "Main gate of Dugdheshwar Nath Mandir, Rudrapur",
+      "hi": "दुग्धेश्वर नाथ मंदिर का मुख्य द्वार, रुद्रपुर"
+    },
+    "author": "Deoria Guide",
+    "license": "Provided by site owner",
+    "licenseUrl": "https://deoria.nic.in/tourist-place/dugdheswarnath-mandir/",
+    "sourceUrl": "https://deoria.nic.in/tourist-place/dugdheswarnath-mandir/",
+    "focus": "50% 45%"
+  },
+  {
+    "id": "dugdheshwar-nath-mandir",
+    "src": "/images/photos/dugdheshwar-nath-mandir.jpg",
+    "width": 640,
+    "height": 480,
+    "caption": {
+      "en": "Dugdheshwar Nath Mandir, Rudrapur",
+      "hi": "दुग्धेश्वर नाथ मंदिर, रुद्रपुर"
+    },
+    "author": "District Administration, Deoria",
+    "license": "deoria.nic.in",
+    "licenseUrl": "https://deoria.nic.in/website-policies/",
+    "sourceUrl": "https://deoria.nic.in/tourist-place/dugdheswarnath-mandir/"
+  },
+  {
+    "id": "person-baba-raghav-das",
+    "src": "/images/people/baba-raghav-das.jpg",
+    "width": 380,
+    "height": 380,
+    "caption": {
+      "en": "Baba Raghav Das (1998 India Post stamp)",
+      "hi": "बाबा राघव दास (1998 का डाक टिकट)"
+    },
+    "author": "India Post, Government of India",
+    "license": "GODL-India",
+    "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Baba_Raghav_Das_1998_stamp_of_India.jpg"
+  },
+  {
+    "id": "person-devraha-baba",
+    "src": "/images/people/devraha-baba.jpg",
+    "width": 420,
+    "height": 420,
+    "caption": {
+      "en": "Devraha Baba (archival photograph)",
+      "hi": "देवरहा बाबा (पुरानी तस्वीर)"
+    },
+    "author": "Deoria Guide",
+    "license": "Provided by site owner",
+    "licenseUrl": "https://deoria.nic.in/tourist-place/dewaraha-baba-aashram/",
+    "sourceUrl": "https://deoria.nic.in/tourist-place/dewaraha-baba-aashram/"
+  },
+  {
+    "id": "person-moti-ba",
+    "src": "/images/people/moti-ba.jpg",
+    "width": 320,
+    "height": 320,
+    "caption": {
+      "en": "Moti BA (photograph, c. 1950)",
+      "hi": "मोती बी.ए. (लगभग 1950 की तस्वीर)"
+    },
+    "author": "Unknown author",
+    "license": "Public domain",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Moti_BA_Motilal_Upadhyay.jpg"
+  },
+  {
+    "id": "person-bishwanath-roy",
+    "src": "/images/people/bishwanath-roy.jpg",
+    "width": 300,
+    "height": 300,
+    "caption": {
+      "en": "Bishwanath Roy (2006 India Post stamp)",
+      "hi": "विश्वनाथ राय (2006 का डाक टिकट)"
+    },
+    "author": "India Post, Government of India",
+    "license": "GODL-India",
+    "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bishwanath_Roy_2006_stamp_of_India.jpg"
+  },
+  {
+    "id": "person-lal-khadag-bahadur-malla",
+    "src": "/images/people/lal-khadag-bahadur-malla.jpg",
+    "width": 390,
+    "height": 390,
+    "caption": {
+      "en": "Lal Khadag Bahadur Malla (portrait drawing)",
+      "hi": "लाल खड्ग बहादुर मल्ल (चित्र)"
+    },
+    "author": "Avinash232020",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lal_Khadag_Bahadur_Mall.png"
+  },
+  {
+    "id": "balaji-mandir",
+    "src": "/images/photos/balaji-mandir.jpg",
+    "width": 873,
+    "height": 1802,
+    "caption": {
+      "en": "Entrance gopuram of Balaji Mandir, Deoria",
+      "hi": "बालाजी मंदिर का प्रवेश गोपुरम, देवरिया"
+    },
+    "author": "Contributed by the guide's editor",
+    "license": "Own photo",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sourceUrl": "https://deoria.nic.in/"
+  },
+  {
+    "id": "devaraha-baba-medical-college",
+    "src": "/images/photos/devaraha-baba-medical-college.jpg",
+    "width": 1000,
+    "height": 1000,
+    "caption": {
+      "en": "Devaraha Baba Medical College, Deoria",
+      "hi": "देवरहा बाबा मेडिकल कॉलेज, देवरिया (प्रतीक चिह्न)"
+    },
+    "author": "Contributed by the guide's editor",
+    "license": "Own file",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sourceUrl": "https://deoria.nic.in/",
+    "fit": "contain"
+  },
+  {
+    "id": "gic-deoria-front",
+    "src": "/images/photos/gic-deoria-front.jpg",
+    "width": 1200,
+    "height": 1200,
+    "caption": {
+      "en": "Government Inter College, Deoria",
+      "hi": "राजकीय इंटर कॉलेज, देवरिया"
+    },
+    "author": "Contributed by the guide's editor",
+    "license": "Own photo",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sourceUrl": "https://deoria.nic.in/"
+  },
+  {
+    "id": "brd-pg-college",
+    "src": "/images/photos/brd-pg-college.jpg",
+    "width": 2000,
+    "height": 667,
+    "caption": {
+      "en": "Entrance sign of Baba Raghav Das PG College, Deoria",
+      "hi": "बाबा राघव दास पीजी कॉलेज, देवरिया का प्रवेश बोर्ड"
+    },
+    "author": "Contributed by the guide's editor",
+    "license": "Own photo",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "sourceUrl": "https://deoria.nic.in/"
+  }
+]

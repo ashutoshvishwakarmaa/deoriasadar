@@ -1,0 +1,59 @@
+[
+  {
+    "number": "112",
+    "label": {
+      "en": "Emergency (police, fire, ambulance)",
+      "hi": "आपातकाल (पुलिस, दमकल, एम्बुलेंस)"
+    },
+    "featured": true
+  },
+  {
+    "number": "108",
+    "label": {
+      "en": "Ambulance",
+      "hi": "एम्बुलेंस"
+    }
+  },
+  {
+    "number": "102",
+    "label": {
+      "en": "Mother & child ambulance",
+      "hi": "मातृ-शिशु एम्बुलेंस"
+    }
+  },
+  {
+    "number": "101",
+    "label": {
+      "en": "Fire",
+      "hi": "दमकल"
+    }
+  },
+  {
+    "number": "1090",
+    "label": {
+      "en": "Women Power Line",
+      "hi": "वीमेन पावर लाइन"
+    }
+  },
+  {
+    "number": "1098",
+    "label": {
+      "en": "Childline",
+      "hi": "चाइल्डलाइन"
+    }
+  },
+  {
+    "number": "1076",
+    "label": {
+      "en": "CM Helpline",
+      "hi": "मुख्यमंत्री हेल्पलाइन"
+    }
+  },
+  {
+    "number": "05568-222316",
+    "label": {
+      "en": "DM Office, Collectorate",
+      "hi": "ज़िलाधिकारी कार्यालय, कलेक्ट्रेट"
+    }
+  }
+]

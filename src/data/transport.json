@@ -1,0 +1,58 @@
+[
+  {
+    "mode": {
+      "en": "Rail",
+      "hi": "रेल"
+    },
+    "head": {
+      "en": "Deoria Sadar · DEOS",
+      "hi": "देवरिया सदर · DEOS"
+    },
+    "body": {
+      "en": "North Eastern Railway, in the city centre. Bhatni Junction (BTT) is nearby for more connections.",
+      "hi": "पूर्वोत्तर रेलवे, शहर के बीच। अधिक ट्रेनों के लिए पास में भटनी जंक्शन (BTT)।"
+    }
+  },
+  {
+    "mode": {
+      "en": "Air",
+      "hi": "हवाई"
+    },
+    "head": {
+      "en": "Gorakhpur · GOP",
+      "hi": "गोरखपुर · GOP"
+    },
+    "body": {
+      "en": "Nearest airport with regular flights, about 50 km by road. Kushinagar International (KBK) is closer, roughly 32 km.",
+      "hi": "नियमित उड़ानों वाला निकटतम हवाई अड्डा, सड़क से लगभग 50 किमी। कुशीनगर अंतरराष्ट्रीय (KBK) लगभग 32 किमी।"
+    }
+  },
+  {
+    "mode": {
+      "en": "Road",
+      "hi": "सड़क"
+    },
+    "head": {
+      "en": "UPSRTC bus stand",
+      "hi": "रोडवेज़ बस अड्डा"
+    },
+    "body": {
+      "en": "State buses to Gorakhpur, Kushinagar, Lucknow and towns across the Bihar border.",
+      "hi": "गोरखपुर, कुशीनगर, लखनऊ और बिहार सीमा के कस्बों के लिए बसें।"
+    }
+  },
+  {
+    "mode": {
+      "en": "In the city",
+      "hi": "शहर में"
+    },
+    "head": {
+      "en": "Autos & e-rickshaws",
+      "hi": "ऑटो व ई-रिक्शा"
+    },
+    "body": {
+      "en": "No metro. Shared autos and e-rickshaws cover the city; book a taxi for Kushinagar or Gorakhpur.",
+      "hi": "मेट्रो नहीं है। शहर में साझा ऑटो और ई-रिक्शा; बाहर के लिए टैक्सी।"
+    }
+  }
+]

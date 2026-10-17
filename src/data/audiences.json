@@ -1,0 +1,139 @@
+[
+  {
+    "id": "visit",
+    "label": {
+      "en": "Visiting",
+      "hi": "घूमने आए हैं"
+    },
+    "items": [
+      {
+        "title": {
+          "en": "Arrive by train",
+          "hi": "ट्रेन से पहुँचें"
+        },
+        "body": {
+          "en": "Deoria Sadar (DEOS) is in the heart of the city, with direct trains from Delhi, Mumbai, Kolkata, Lucknow and Varanasi.",
+          "hi": "देवरिया सदर (DEOS) शहर के बीच में है। दिल्ली, मुंबई, कोलकाता, लखनऊ और वाराणसी से सीधी ट्रेनें।"
+        }
+      },
+      {
+        "title": {
+          "en": "Go in Sawan",
+          "hi": "सावन में जाएँ"
+        },
+        "body": {
+          "en": "Dugdheshwar Nath Mandir at Rudrapur draws thousands of devotees for jalabhishek during the month of Sawan.",
+          "hi": "सावन में रुद्रपुर के दुग्धेश्वर नाथ मंदिर में हज़ारों श्रद्धालु जलाभिषेक के लिए आते हैं।"
+        }
+      },
+      {
+        "title": {
+          "en": "Save 112",
+          "hi": "112 सेव करें"
+        },
+        "body": {
+          "en": "One number for police, fire and ambulance anywhere in the district.",
+          "hi": "पूरे ज़िले में पुलिस, दमकल और एम्बुलेंस के लिए एक नंबर।"
+        }
+      }
+    ]
+  },
+  {
+    "id": "live",
+    "label": {
+      "en": "Moving here",
+      "hi": "यहाँ बस रहे हैं"
+    },
+    "items": [
+      {
+        "title": {
+          "en": "Collectorate",
+          "hi": "कलेक्ट्रेट"
+        },
+        "body": {
+          "en": "District Magistrate’s office, Collectorate Campus. Office: 05568-222316.",
+          "hi": "ज़िलाधिकारी कार्यालय, कलेक्ट्रेट परिसर। कार्यालय: 05568-222316।"
+        }
+      },
+      {
+        "title": {
+          "en": "Nagar Palika Parishad",
+          "hi": "नगर पालिका परिषद"
+        },
+        "body": {
+          "en": "Property tax, water, birth and death certificates, and ward complaints for the city.",
+          "hi": "शहर के लिए गृहकर, जल, जन्म-मृत्यु प्रमाणपत्र और वार्ड शिकायतें।"
+        }
+      },
+      {
+        "title": {
+          "en": "Vehicles: UP-52",
+          "hi": "वाहन: UP-52"
+        },
+        "body": {
+          "en": "Register vehicles and apply for licences at the Deoria RTO.",
+          "hi": "देवरिया आरटीओ में वाहन पंजीकरण और लाइसेंस।"
+        }
+      },
+      {
+        "title": {
+          "en": "Complaints: 1076",
+          "hi": "शिकायत: 1076"
+        },
+        "body": {
+          "en": "The Chief Minister’s helpline and the Jansunwai portal accept grievances online.",
+          "hi": "मुख्यमंत्री हेल्पलाइन और जनसुनवाई पोर्टल पर ऑनलाइन शिकायत।"
+        }
+      }
+    ]
+  },
+  {
+    "id": "study",
+    "label": {
+      "en": "Studying",
+      "hi": "पढ़ाई के लिए"
+    },
+    "items": [
+      {
+        "title": {
+          "en": "Medical college",
+          "hi": "मेडिकल कॉलेज"
+        },
+        "body": {
+          "en": "Maharshi Devraha Baba Autonomous State Medical College, Deoria.",
+          "hi": "महर्षि देवरहा बाबा स्वशासी राज्य चिकित्सा महाविद्यालय, देवरिया।"
+        }
+      },
+      {
+        "title": {
+          "en": "Degree colleges",
+          "hi": "डिग्री कॉलेज"
+        },
+        "body": {
+          "en": "Baba Raghav Das PG College in the city; Madan Mohan Malviya PG College, Bhatpar Rani.",
+          "hi": "शहर में बाबा राघव दास पीजी कॉलेज; मदन मोहन मालवीय पीजी कॉलेज, भाटपार रानी।"
+        }
+      },
+      {
+        "title": {
+          "en": "Schools",
+          "hi": "विद्यालय"
+        },
+        "body": {
+          "en": "Government Inter College (GIC), Deoria, and Shri Krishna Inter College, Barhaj.",
+          "hi": "राजकीय इंटर कॉलेज (GIC), देवरिया और श्री कृष्ण इंटर कॉलेज, बरहज।"
+        }
+      },
+      {
+        "title": {
+          "en": "Nearest university",
+          "hi": "निकटतम विश्वविद्यालय"
+        },
+        "body": {
+          "en": "Gorakhpur, about 50 km west, is the nearest university city.",
+          "hi": "लगभग 50 किमी पश्चिम में गोरखपुर निकटतम विश्वविद्यालय शहर है।"
+        }
+      }
+    ]
+  }
+]
