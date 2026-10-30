@@ -24,7 +24,7 @@ export default function GlobalError({ error, retry }: { error: unknown; retry: (
   }, [error]);
 
   return (
-    <html lang="en" className={poppins.variable}>
+    <html lang="en" className={poppins.variable} data-scroll-behavior="smooth">
       <body className="min-h-dvh bg-paper text-ink">
         <title>{`${en.error.title} · ${en.brand}`}</title>
         <main className="mx-auto max-w-[720px] px-4 py-32 sm:px-8">

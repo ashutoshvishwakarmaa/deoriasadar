@@ -39,6 +39,26 @@ npm run dev                  # http://localhost:3000
 | `npm run feedback`    | Summary of assistant ratings and unanswered questions (needs Redis) |
 | `npm run format`      | Prettier                                                            |
 
+## Testing
+
+**Development vs production.** `npm run dev` is for editing code and content. Some features only behave for real in a production build (`npm run build && npm start`):
+
+- **Production only:** the service worker, and with it everything offline: saved pages, the offline banner, the "Saved for offline use" badge and cached map tiles.
+- **Prerendering:** in development each page is compiled on its first visit, so the first request to a page is slow (`generate-params` in the log). Production prerenders every page at build time.
+- **Share cards** (`/…/opengraph-image/card`) render on their first request and are cached after that.
+
+**Start clean.** The service worker keeps copies of pages, scripts, photos and map tiles in the browser. After a new build, clear them so you see the new version: DevTools → Application → Storage → **Clear site data**, then reload with Ctrl+Shift+R. Or use a private window. To clear the build cache itself, stop the server and delete `.next`.
+
+**Testing offline by hand.** In a production build, open a few pages, then DevTools → Network → **Offline**. The emergency, explore, map and search pages (both languages) and every page you opened still work. A page you never opened shows the emergency numbers instead.
+
+**Automated tests.**
+
+- `npm test`: unit and API-route tests (Vitest). No server or keys needed.
+- `npm run build && npm run test:e2e`: browser tests (Playwright, desktop and phone size) against the production build on port 3100. They cover language routing, search, offline mode, the assistant (with a mocked API, so no key or cost), share cards, structured data, and axe accessibility checks (WCAG 2.1 AA). Run `npx playwright install chromium` once first. A failed run leaves a report in `playwright-report/`.
+- `npm run check:links`: checks every external link in the content. It runs weekly in CI too.
+
+CI (`.github/workflows/ci.yml`) runs typecheck, lint, formatting, unit tests, the build and the browser tests on every push and pull request.
+
 ## Project layout
 
 ```
@@ -70,6 +90,9 @@ assets/fonts/              Poppins TTFs for share cards (OFL)
 scripts/                   Link checker, feedback report
 tests/                     Vitest suites
 e2e/                       Playwright suites
+docs/hindi-review.md       Hindi strings for a native-speaker review
+CONTENT.md                 Guide for non-developer editors
+.github/                   CI, weekly link check, correction issue form, PR checklist
 ```
 
 ## Editing content
