@@ -1,5 +1,7 @@
 import { GovernanceSection } from "@/components/sections";
 import { pageMetadata, resolveLocale } from "@/lib/page";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbs } from "@/lib/structured-data";
 
 export function generateMetadata({ params }: PageProps<"/[locale]/governance">) {
   return pageMetadata(params, "/governance", (dict) => ({ title: dict.sections.governance }));
@@ -7,5 +9,10 @@ export function generateMetadata({ params }: PageProps<"/[locale]/governance">) 
 
 export default async function Page({ params }: PageProps<"/[locale]/governance">) {
   const { locale, dict } = await resolveLocale(params);
-  return <GovernanceSection locale={locale} dict={dict} standalone />;
+  return (
+    <>
+      <JsonLd data={[breadcrumbs(locale, [{ name: dict.nav.governance, path: `/${locale}/governance` }])]} />
+      <GovernanceSection locale={locale} dict={dict} standalone />
+    </>
+  );
 }

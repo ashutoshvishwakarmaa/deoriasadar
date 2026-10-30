@@ -3,6 +3,8 @@ import { Container, PageIntro } from "@/components/ui";
 import { photos, sources } from "@/lib/data";
 import { t } from "@/lib/i18n";
 import { pageMetadata, resolveLocale } from "@/lib/page";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbs } from "@/lib/structured-data";
 
 export function generateMetadata({ params }: PageProps<"/[locale]/about">) {
   return pageMetadata(params, "/about", (dict) => ({ title: dict.about.title, description: dict.about.intro }));
@@ -12,6 +14,7 @@ export default async function Page({ params }: PageProps<"/[locale]/about">) {
   const { locale, dict } = await resolveLocale(params);
   return (
     <>
+      <JsonLd data={[breadcrumbs(locale, [{ name: dict.nav.about, path: `/${locale}/about` }])]} />
       <PageIntro title={dict.about.title}>{dict.about.intro}</PageIntro>
       <Container className="grid gap-16 pt-14 lg:grid-cols-2">
         <section>

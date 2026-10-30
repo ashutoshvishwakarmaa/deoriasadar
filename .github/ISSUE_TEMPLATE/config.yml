@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: How to edit content yourself
+    url: https://github.com/ashutoshvishwakarmaa/deoriasadar/blob/main/CONTENT.md
+    about: A plain-language guide to fixing the guide's content directly on github.com.

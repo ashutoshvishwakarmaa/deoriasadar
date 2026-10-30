@@ -15,9 +15,26 @@ const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "expected YYYY-MM-DD");
 export const placeCategory = z.enum(["faith", "health", "transport", "offices", "education"]);
 export type PlaceCategory = z.infer<typeof placeCategory>;
 
+/** schema.org types a place can be published as in structured data. */
+export const placeSchemaType = z.enum([
+  "PlaceOfWorship",
+  "HinduTemple",
+  "Hospital",
+  "MedicalOrganization",
+  "TrainStation",
+  "BusStation",
+  "GovernmentOffice",
+  "Courthouse",
+  "CollegeOrUniversity",
+  "School",
+]);
+export type PlaceSchemaType = z.infer<typeof placeSchemaType>;
+
 export const placeSchema = z.object({
   slug: z.string().regex(/^[a-z0-9-]+$/),
   categories: z.array(placeCategory).min(1),
+  /** schema.org type for search engines; when omitted, it follows the first category. */
+  schemaType: placeSchemaType.optional(),
   featured: z.boolean().optional(),
   name: localized,
   aliases: z.array(z.string()).default([]),
@@ -61,8 +78,6 @@ export const photoSchema = z.object({
   license: z.string().min(1),
   licenseUrl: z.url(),
   sourceUrl: z.url(),
-  /** The owner's reuse terms require written permission that has not been confirmed yet. */
-  permissionPending: z.boolean().optional(),
   /** CSS object-position for cropping, e.g. "50% 30%" to keep a face in frame. */
   focus: z
     .string()

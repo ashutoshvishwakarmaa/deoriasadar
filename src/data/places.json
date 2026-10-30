@@ -2,6 +2,7 @@
   {
     "slug": "dugdheshwar-nath-mandir",
     "categories": ["faith"],
+    "schemaType": "HinduTemple",
     "featured": true,
     "name": {
       "en": "Dugdheshwar Nath Mandir",
@@ -60,6 +61,7 @@
   {
     "slug": "hanuman-mandir",
     "categories": ["faith"],
+    "schemaType": "HinduTemple",
     "featured": true,
     "name": {
       "en": "Hanuman Mandir",
@@ -86,6 +88,7 @@
   {
     "slug": "bade-hanuman-mandir",
     "categories": ["faith"],
+    "schemaType": "HinduTemple",
     "featured": true,
     "name": {
       "en": "Bade Hanuman Mandir",
@@ -121,6 +124,7 @@
   {
     "slug": "baripur-mandir",
     "categories": ["faith"],
+    "schemaType": "HinduTemple",
     "featured": true,
     "name": {
       "en": "Baripur Mandir (Hanuman ji)",
@@ -147,6 +151,7 @@
   {
     "slug": "durga-somnath-mandir",
     "categories": ["faith"],
+    "schemaType": "HinduTemple",
     "featured": true,
     "name": {
       "en": "Durga & Somnath Mandir",
@@ -173,6 +178,7 @@
   {
     "slug": "balaji-mandir",
     "categories": ["faith"],
+    "schemaType": "HinduTemple",
     "featured": false,
     "name": {
       "en": "Balaji Mandir",
@@ -211,6 +217,7 @@
   {
     "slug": "maharshi-devraha-baba-medical-college",
     "categories": ["health", "education"],
+    "schemaType": "CollegeOrUniversity",
     "name": {
       "en": "Maharshi Devraha Baba Medical College",
       "hi": "महर्षि देवरहा बाबा मेडिकल कॉलेज"
@@ -250,6 +257,7 @@
   {
     "slug": "blood-bank",
     "categories": ["health"],
+    "schemaType": "MedicalOrganization",
     "name": {
       "en": "Blood bank",
       "hi": "ब्लड बैंक"
@@ -312,6 +320,7 @@
   {
     "slug": "roadways-bus-stand",
     "categories": ["transport"],
+    "schemaType": "BusStation",
     "name": {
       "en": "Roadways bus stand",
       "hi": "रोडवेज़ बस अड्डा"
@@ -370,6 +379,7 @@
   {
     "slug": "district-sessions-court",
     "categories": ["offices"],
+    "schemaType": "Courthouse",
     "name": {
       "en": "District & Sessions Court",
       "hi": "ज़िला एवं सत्र न्यायालय"
@@ -389,6 +399,7 @@
   {
     "slug": "baba-raghav-das-pg-college",
     "categories": ["education"],
+    "schemaType": "CollegeOrUniversity",
     "name": {
       "en": "Baba Raghav Das PG College",
       "hi": "बाबा राघव दास पीजी कॉलेज"

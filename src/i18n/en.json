@@ -26,7 +26,8 @@
     "heroSmall": "देवरिया",
     "heroSub": "Devaranya, the forest of the gods. A complete guide to the city for visitors, new residents and students.",
     "startHere": "Start here",
-    "viewAll": "View all"
+    "viewAll": "View all",
+    "facts": "Deoria at a glance"
   },
   "search": {
     "placeholder": "Search temples, trains, hospitals…",
@@ -36,9 +37,6 @@
     "noResults": "Nothing matched. Try another spelling, or ask the assistant.",
     "empty": "Type at least two letters to search.",
     "loading": "Searching…",
-    "error": "Search is not working right now. Please check your connection and try again.",
-    "rateLimited": "Too many searches in a short time. Please wait a minute and try again.",
-    "retry": "Try again",
     "types": {
       "place": "Place",
       "person": "Person",
@@ -73,7 +71,8 @@
     "verifiedOn": "Last verified",
     "unverified": "Not yet verified",
     "sources": "Sources",
-    "callOffice": "Call"
+    "callOffice": "Call",
+    "suggestEdit": "Suggest an edit"
   },
   "badges": {
     "verified": "Verified",
@@ -132,17 +131,36 @@
       "Which temples should I visit?",
       "What is the DM office number?",
       "देवरिया में आपातकालीन नंबर क्या हैं?"
-    ]
+    ],
+    "helpful": "Helpful",
+    "notHelpful": "Not helpful",
+    "thanks": "Thanks for the feedback"
   },
   "notFound": {
     "title": "Page not found",
     "body": "This page does not exist. Try the search or go back home.",
     "home": "Back to home"
   },
+  "error": {
+    "title": "Something went wrong",
+    "body": "This page could not be shown. It is probably a temporary problem; please try again.",
+    "retry": "Try again",
+    "home": "Go to the home page",
+    "emergency": "Need help now? Emergency numbers",
+    "code": "Error reference"
+  },
   "photos": {
     "photoBy": "Photo",
     "credits": "Photo credits",
     "creditsIntro": "Photos are from Wikimedia Commons, used under their free licences and resized for the web. Want to add your own photo of Deoria? Use the correction form.",
     "noPhoto": "Photo coming soon"
+  },
+  "status": {
+    "loading": "Loading…"
+  },
+  "offline": {
+    "banner": "You are offline. Pages you opened before still work.",
+    "emergency": "Emergency numbers",
+    "saved": "Saved for offline use"
   }
 }

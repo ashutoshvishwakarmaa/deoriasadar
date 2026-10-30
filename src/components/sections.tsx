@@ -14,6 +14,7 @@ import {
 import { getDictionary, t, type Dictionary, type Locale } from "@/lib/i18n";
 import type { Place } from "@/lib/schema";
 import { CityPhoto, Container, PhotoPlaceholder, SectionHeader, VerifiedBadge } from "./ui";
+import { OfflineReady } from "./offline-status";
 
 interface SectionProps {
   locale: Locale;
@@ -27,9 +28,10 @@ interface SectionProps {
 const kicker = (locale: Locale) => (locale === "hi" ? "tracking-normal" : "tracking-[.14em]");
 const top = (standalone?: boolean) => (standalone ? "pt-16 sm:pt-20" : "pt-28");
 
-export function FactsTable({ locale }: { locale: Locale }) {
+export function FactsTable({ locale, label }: { locale: Locale; label: string }) {
   return (
-    <div className="mt-5 overflow-x-auto rounded-2xl border border-ink/15 bg-white">
+    // Scrolls sideways on phones, so it takes keyboard focus to be scrollable without a mouse.
+    <div role="region" aria-label={label} tabIndex={0} className="mt-5 overflow-x-auto rounded-2xl border border-ink/15 bg-white">
       <table className="w-full min-w-[640px] border-collapse">
         <thead>
           <tr>
@@ -244,29 +246,32 @@ export function EmergencySection({ locale, dict, standalone }: SectionProps) {
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="flex items-center gap-3.5">
             <Heading className="section-title">{dict.sections.emergency}</Heading>
-            <span className="rounded-full bg-accent px-3 py-[5px] text-[11px] font-semibold tracking-[.08em] text-ink">24/7</span>
+            <span className="rounded-full bg-accent px-3 py-[5px] text-[11px] font-semibold tracking-[.08em] text-paper">
+              24/7
+            </span>
+            {standalone && <OfflineReady path={`/${locale}/emergency`} label={dict.offline.saved} />}
           </div>
           <p className="max-w-[420px] text-sm leading-relaxed text-night-muted">{dict.sections.emergencyNote}</p>
         </div>
         <div data-reveal-stagger className="mt-11 grid gap-5 md:grid-cols-[minmax(260px,1fr)_1.4fr]">
           <a
             href={telHref(featuredEmergency.number)}
-            className="relative flex min-h-[320px] flex-col justify-between gap-7 overflow-hidden rounded-[22px] bg-accent px-[34px] py-10 text-ink transition-transform duration-300 ease-out-expo hover:-translate-y-[5px]"
+            className="relative flex min-h-[320px] flex-col justify-between gap-7 overflow-hidden rounded-[22px] bg-accent px-[34px] py-10 text-paper transition-transform duration-300 ease-out-expo hover:-translate-y-[5px]"
           >
             <div className="flex items-start justify-between">
               <span
-                className="pulse-ring flex size-11 items-center justify-center rounded-full border-[1.5px] border-ink"
+                className="pulse-ring flex size-11 items-center justify-center rounded-full border-[1.5px] border-paper"
                 aria-hidden
               >
-                <span className="size-2.5 rounded-full bg-ink" />
+                <span className="size-2.5 rounded-full bg-paper" />
               </span>
-              <span className="em-hint text-[11px] tracking-[.05em] text-ink/65 uppercase">{dict.emergency.tap}</span>
+              <span className="em-hint text-[11px] tracking-[.05em] text-paper uppercase">{dict.emergency.tap}</span>
             </div>
             <div>
               <div className="text-[clamp(56px,7vw,92px)] leading-none font-semibold tracking-[-.04em]">
                 {featuredEmergency.number}
               </div>
-              <div className="mt-2.5 max-w-[280px] text-[15px] leading-normal text-ink/70">
+              <div className="mt-2.5 max-w-[280px] text-[15px] leading-normal text-paper">
                 {t(featuredEmergency.label, locale)}
               </div>
             </div>

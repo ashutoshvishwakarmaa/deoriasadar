@@ -3,10 +3,18 @@ import { localeNote, SYSTEM_PROMPT } from "@/lib/chat/prompt";
 import { chatRequestSchema, type ChatEvent } from "@/lib/chat/protocol";
 import { runTool, tools } from "@/lib/chat/tools";
 import { env } from "@/lib/env";
-import { clientKey, rateLimit } from "@/lib/rate-limit";
+import { anonymise, day, record } from "@/lib/feedback";
+import { checkRateLimit, clientKey } from "@/lib/rate-limit";
+import { redis } from "@/lib/redis";
 
-const MODEL = "claude-opus-5-5";
 const MAX_TOOL_ROUNDS = 6;
+const DAY_MS = 24 * 60 * 60_000;
+
+/** Instant kill switch for deployments with Redis: `SET chat:disabled 1` (delete the key to turn the assistant back on). */
+async function disabledInRedis() {
+  const replies = await redis([["GET", "chat:disabled"]]);
+  return Boolean(replies?.[0]) && replies?.[0] !== "0";
+}
 
 let client: Anthropic | undefined;
 function getClient() {
@@ -19,20 +27,21 @@ function json(status: number, body: unknown, headers?: HeadersInit) {
 }
 
 export async function POST(request: Request) {
-  if (!env.anthropicConfigured) {
+  if (!env.anthropicConfigured || env.chatDisabled || (await disabledInRedis())) {
     return json(503, { error: "unavailable" });
   }
 
   // Two windows: a short burst limit and a longer budget per visitor.
   const key = clientKey(request);
-  for (const [limit, windowMs] of [
-    [6, 60_000],
-    [40, 60 * 60_000],
-  ] as const) {
-    const rl = rateLimit(`chat:${windowMs}:${key}`, limit, windowMs);
-    if (!rl.ok) {
-      return json(429, { error: "rate_limited" }, { "Retry-After": String(rl.retryAfterSeconds) });
-    }
+  const limits = await Promise.all(
+    [
+      [6, 60_000],
+      [40, 60 * 60_000],
+    ].map(([limit, windowMs]) => checkRateLimit(`chat:${windowMs}:${key}`, limit, windowMs)),
+  );
+  const blocked = limits.find((rl) => !rl.ok);
+  if (blocked) {
+    return json(429, { error: "rate_limited" }, { "Retry-After": String(blocked.retryAfterSeconds) });
   }
 
   let body: unknown;
@@ -47,6 +56,14 @@ export async function POST(request: Request) {
   }
   const { locale, messages: history } = parsed.data;
 
+  // Global daily budget across all visitors: bounds the worst-case API bill for one day.
+  const today = new Date().toISOString().slice(0, 10);
+  const budget = await checkRateLimit(`chat:day:${today}`, env.chatDailyLimit, DAY_MS);
+  if (!budget.ok) {
+    console.warn(`[chat] daily limit of ${env.chatDailyLimit} requests reached`);
+    return json(503, { error: "unavailable" });
+  }
+
   const system: Anthropic.Beta.BetaTextBlockParam[] = [
     { type: "text", text: SYSTEM_PROMPT, cache_control: { type: "ephemeral" } },
     { type: "text", text: localeNote(locale) },
@@ -59,12 +76,14 @@ export async function POST(request: Request) {
   const stream = new ReadableStream<Uint8Array>({
     async start(controller) {
       const send = (event: ChatEvent) => controller.enqueue(encoder.encode(JSON.stringify(event) + "\n"));
+      // Searches that found nothing in the guide: recorded once the answer is done, as content gaps.
+      const unmatched: string[] = [];
 
       try {
         for (let round = 0; round < MAX_TOOL_ROUNDS; round++) {
           const turn = getClient().beta.messages.stream(
             {
-              model: MODEL,
+              model: env.chatModel,
               max_tokens: 16000,
               system,
               tools,
@@ -103,6 +122,7 @@ export async function POST(request: Request) {
           const results: Anthropic.Beta.BetaToolResultBlockParam[] = toolUses.map((use) => {
             send({ type: "status", tool: use.name });
             const outcome = runTool(use.name, use.input);
+            if (outcome.noMatch) unmatched.push(outcome.noMatch);
             return { type: "tool_result", tool_use_id: use.id, content: outcome.content, is_error: outcome.isError };
           });
           // All results for one assistant turn go back in a single user message.
@@ -110,6 +130,14 @@ export async function POST(request: Request) {
           send({ type: "break" });
         }
         send({ type: "done" });
+        if (unmatched.length) {
+          await record("gaps", {
+            locale,
+            question: anonymise(history[history.length - 1].content),
+            searched: unmatched.map((q) => anonymise(q, 200)),
+            day: day(),
+          });
+        }
       } catch (error) {
         if (request.signal.aborted) return;
         if (error instanceof Anthropic.RateLimitError || error instanceof Anthropic.InternalServerError) {

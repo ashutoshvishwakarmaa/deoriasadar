@@ -1,9 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import { notFound } from "next/navigation";
+import { Analytics } from "@/components/analytics";
 import { ChatWidget } from "@/components/chat/chat-widget";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { OfflineStatus } from "@/components/offline-status";
 import { ServiceWorkerRegister } from "@/components/sw-register";
 import { getDictionary, hasLocale, locales } from "@/lib/i18n";
 import "../globals.css";
@@ -67,7 +69,9 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
         <main id="main">{children}</main>
         <Footer locale={locale} dict={dict} />
         <ChatWidget locale={locale} dict={dict.chat} />
+        <OfflineStatus locale={locale} dict={dict.offline} />
         <ServiceWorkerRegister />
+        {process.env.NEXT_PUBLIC_VERCEL_ENV && <Analytics />}
       </body>
     </html>
   );

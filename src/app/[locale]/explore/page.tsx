@@ -2,6 +2,8 @@ import { PlaceCard } from "@/components/sections";
 import { Container, PageIntro } from "@/components/ui";
 import { mapCategories, placesIn } from "@/lib/data";
 import { pageMetadata, resolveLocale } from "@/lib/page";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbs, placeList } from "@/lib/structured-data";
 
 export function generateMetadata({ params }: PageProps<"/[locale]/explore">) {
   return pageMetadata(params, "/explore", (dict) => ({ title: dict.sections.places }));
@@ -11,6 +13,7 @@ export default async function Page({ params }: PageProps<"/[locale]/explore">) {
   const { locale, dict } = await resolveLocale(params);
   return (
     <>
+      <JsonLd data={[breadcrumbs(locale, [{ name: dict.nav.explore, path: `/${locale}/explore` }]), placeList(locale)]} />
       <PageIntro kicker={dict.nav.explore} title={dict.sections.places} />
       {mapCategories.map((category) => {
         const items = placesIn(category);

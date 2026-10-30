@@ -2,6 +2,8 @@ import Link from "next/link";
 import { Container } from "@/components/ui";
 import { getDictionary } from "@/lib/i18n";
 
+export const metadata = { title: getDictionary("en").notFound.title };
+
 // not-found receives no params; English is the safe default.
 export default function NotFound() {
   const dict = getDictionary("en");

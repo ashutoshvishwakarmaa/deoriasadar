@@ -1,0 +1,79 @@
+# Field ids (entry, page_url, …) are prefilled by the "Suggest an edit" link on place pages
+# (src/lib/suggest-edit.ts). Rename an id only together with that file.
+name: Content correction
+description: Report wrong or missing information on the Deoria guide (a place, phone number, official, photo…).
+title: "Correction: "
+labels: ["content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping keep the guide accurate. You do not need to know any code: just tell us what is wrong and what it should say.
+        धन्यवाद! आप हिन्दी या अंग्रेज़ी, किसी भी भाषा में लिख सकते हैं।
+  - type: dropdown
+    id: content_type
+    attributes:
+      label: What kind of entry is it?
+      options:
+        - Place (temple, hospital, office, station, school…)
+        - Official (MP, MLA, DM…)
+        - Emergency number
+        - Transport
+        - History
+        - Person
+        - Photo
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: entry
+    attributes:
+      label: Which entry?
+      description: The name as it appears on the site.
+      placeholder: e.g. Dugdheshwar Nath Mandir
+    validations:
+      required: true
+  - type: input
+    id: page_url
+    attributes:
+      label: Page URL
+      description: Copy the address from your browser, if you have it.
+      placeholder: https://…/en/explore/dugdheshwar-nath-mandir
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      placeholder: e.g. The phone number does not connect / the DM has changed.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What should it say?
+      description: The correct information. If you can, give it in both English and Hindi.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source or evidence
+      description: >-
+        A link (for example deoria.nic.in, a government notice or a news report) or how you know.
+        **Required for phone numbers and officials**: we cannot change these without a source.
+    validations:
+      required: false
+  - type: dropdown
+    id: language
+    attributes:
+      label: Which language version is affected?
+      options:
+        - English
+        - Hindi
+        - Both
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact (optional)
+      description: Only if you are happy for us to ask a follow-up question. This issue is public, so do not post a phone number.

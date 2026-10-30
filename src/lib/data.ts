@@ -60,10 +60,6 @@ export const photos = parse(z.array(photoSchema), photosJson, "photos.json");
   for (const id of refs) {
     if (!photoIds.has(id)) throw new Error(`Unknown photo id "${id}" (add it to photos.json)`);
   }
-  const pending = photos.filter((ph) => ph.permissionPending).map((ph) => ph.id);
-  if (pending.length && process.env.NODE_ENV !== "test") {
-    console.warn(`[photos] Reuse permission still pending for: ${pending.join(", ")} (see README → Photos)`);
-  }
   if (emergencyNumbers.filter((e) => e.featured).length !== 1) {
     throw new Error("emergency.json must mark exactly one number as featured");
   }

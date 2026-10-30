@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { JsonLd } from "@/components/json-ld";
 import { CityPhoto, Container, PhotoPlaceholder } from "@/components/ui";
 import { getPhoto, getPlace, places, sourcesFor, telHref } from "@/lib/data";
 import { getDictionary, hasLocale, t } from "@/lib/i18n";
 import { resolveLocale } from "@/lib/page";
+import { absolute, breadcrumbs, place as placeLd } from "@/lib/structured-data";
+import { suggestEditUrl } from "@/lib/suggest-edit";
 
 export function generateStaticParams() {
   return places.map((p) => ({ slug: p.slug }));
@@ -46,19 +49,17 @@ export default async function Page({ params }: PageProps<"/[locale]/explore/[slu
   const cited = sourcesFor(place.sources);
   const photo = getPhoto(place.photoId);
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": place.categories.includes("faith") ? "PlaceOfWorship" : "Place",
-    name: t(place.name, locale),
-    description: t(place.summary, locale),
-    ...(place.coords && { geo: { "@type": "GeoCoordinates", latitude: place.coords[0], longitude: place.coords[1] } }),
-    ...(place.phone && { telephone: place.phone }),
-    containedInPlace: { "@type": "City", name: "Deoria" },
-  };
-
   return (
     <article>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
+      <JsonLd
+        data={[
+          placeLd(place, locale),
+          breadcrumbs(locale, [
+            { name: dict.nav.explore, path: `/${locale}/explore` },
+            { name: t(place.name, locale), path: `/${locale}/explore/${place.slug}` },
+          ]),
+        ]}
+      />
       <Container className="pt-12 sm:pt-16">
         <Link href={`/${locale}/explore`} className="text-sm text-muted hover:text-accent">
           ← {d.back}
@@ -143,6 +144,16 @@ export default async function Page({ params }: PageProps<"/[locale]/explore/[slu
                 </ul>
               </div>
             )}
+            <p className={`${cited.length > 0 ? "mt-4" : "mt-10"} text-sm`}>
+              <a
+                href={suggestEditUrl({ entry: t(place.name, locale), pageUrl: absolute(`/${locale}/explore/${place.slug}`) })}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted underline underline-offset-2 hover:text-accent"
+              >
+                {d.suggestEdit} ↗
+              </a>
+            </p>
           </div>
           {photo ? (
             <div className="lg:sticky lg:top-28 lg:self-start">

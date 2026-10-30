@@ -9,6 +9,11 @@ import { search } from "../search";
  * Tools the assistant uses to read this guide's JSON data. Each tool returns
  * both languages so the model can answer in whichever one the user writes in,
  * plus a verification date so it can flag unconfirmed details.
+ *
+ * Everything returned here comes from the editor-controlled JSON in src/data.
+ * If a tool ever returns user-submitted text (reviews, corrections), treat it as
+ * untrusted: quote it in a clearly labelled field and never mix it into fields
+ * the model relies on as facts, such as phone numbers or page links.
  */
 
 const topics = [
@@ -133,6 +138,8 @@ function runTopic(topic: (typeof topics)[number]) {
 export interface ToolOutcome {
   content: string;
   isError: boolean;
+  /** Set when the guide had nothing for this lookup: the query, recorded as a content gap. */
+  noMatch?: string;
 }
 
 /** Validate and run one tool call. Never throws: errors become `is_error` results for the model. */
@@ -146,10 +153,12 @@ export function runTool(name: string, rawInput: unknown): ToolOutcome {
   }
 
   let result: unknown;
+  let noMatch: string | undefined;
   switch (name as ToolName) {
     case "search_guide": {
       const { query } = parsed.data as z.infer<typeof inputs.search_guide>;
       const hits = search(query, "en", 8);
+      if (hits.length === 0) noMatch = query;
       result = hits.length
         ? hits.map((h) => {
             const place = h.type === "place" ? getPlace(h.id.slice("place:".length)) : undefined;
@@ -184,5 +193,5 @@ export function runTool(name: string, rawInput: unknown): ToolOutcome {
       break;
     }
   }
-  return { content: JSON.stringify(result), isError: false };
+  return { content: JSON.stringify(result), isError: false, ...(noMatch && { noMatch }) };
 }

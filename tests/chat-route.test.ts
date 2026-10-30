@@ -113,6 +113,36 @@ describe("POST /api/chat", () => {
     expect(JSON.parse(toolResult.content)[0].slug).toBe("dugdheshwar-nath-mandir");
   });
 
+  it("records a question the guide could not answer as a content gap, anonymised", async () => {
+    const info = vi.spyOn(console, "info").mockImplementation(() => {});
+    script = [
+      {
+        events: [],
+        final: {
+          stop_reason: "tool_use",
+          content: [{ type: "tool_use", id: "tu_1", name: "search_guide", input: { query: "passport office" } }],
+        },
+      },
+      { events: [textDelta("The guide does not have this yet.")], final: { stop_reason: "end_turn", content: [] } },
+    ];
+
+    const { events } = await post({
+      locale: "en",
+      messages: [{ role: "user", content: "Passport office? Call me on 9876543210" }],
+    });
+
+    expect(events.at(-1)).toEqual({ type: "done" });
+    const gap = info.mock.calls.find(([tag]) => tag === "[gaps]");
+    expect(gap).toBeDefined();
+    expect(JSON.parse(gap![1] as string)).toEqual({
+      locale: "en",
+      question: "Passport office? Call me on [number]",
+      searched: ["passport office"],
+      day: expect.stringMatching(/^\d{4}-\d{2}-\d{2}$/),
+    });
+    info.mockRestore();
+  });
+
   it("reports a refusal without leaking partial tool calls", async () => {
     script = [{ events: [], final: { stop_reason: "refusal", content: [] } }];
     const { events } = await post({ locale: "hi", messages: [{ role: "user", content: "..." }] });
@@ -139,6 +169,40 @@ describe("POST /api/chat", () => {
     const { status } = await post({ locale: "en", messages: [{ role: "assistant", content: "hi" }] });
     expect(status).toBe(400);
     expect(calls).toHaveLength(0);
+  });
+
+  it("uses CHAT_MODEL when it names a supported model, and ignores anything else", async () => {
+    const answer = { events: [], final: { stop_reason: "end_turn", content: [{ type: "text", text: "ok" }] } };
+    script = [answer, answer];
+    vi.stubEnv("CHAT_MODEL", "claude-sonnet-5-5");
+    await post({ locale: "en", messages: [{ role: "user", content: "q" }] });
+    vi.stubEnv("CHAT_MODEL", "gpt-something");
+    await post({ locale: "en", messages: [{ role: "user", content: "q" }] });
+    vi.unstubAllEnvs();
+    expect(calls.map((c) => c.model)).toEqual(["claude-sonnet-5-5", "claude-opus-5-5"]);
+  });
+
+  it("returns 503 without calling the API when the kill switch is on", async () => {
+    vi.stubEnv("CHAT_DISABLED", "1");
+    const { status } = await post({ locale: "en", messages: [{ role: "user", content: "hi" }] });
+    vi.unstubAllEnvs();
+    expect(status).toBe(503);
+    expect(calls).toHaveLength(0);
+  });
+
+  it("stops answering for the day once the global daily limit is reached", async () => {
+    vi.useFakeTimers({ toFake: ["Date"] });
+    vi.setSystemTime(new Date("2031-05-01T10:00:00Z")); // a fresh day counter
+    vi.stubEnv("CHAT_DAILY_LIMIT", "1");
+    vi.spyOn(console, "warn").mockImplementation(() => {});
+    script = [{ events: [], final: { stop_reason: "end_turn", content: [{ type: "text", text: "ok" }] } }];
+    const first = await post({ locale: "en", messages: [{ role: "user", content: "q" }] });
+    const second = await post({ locale: "en", messages: [{ role: "user", content: "q" }] });
+    vi.unstubAllEnvs();
+    vi.useRealTimers();
+    expect(first.status).toBe(200);
+    expect(second.status).toBe(503);
+    expect(calls).toHaveLength(1);
   });
 
   it("returns 503 when no API credentials are configured", async () => {

@@ -10,9 +10,10 @@
   --color-ink-2: #3d3932;
   --color-muted: #57524a;
   --color-muted-2: #6b665c;
-  --color-faint: #8a8478;
+  /* Darkest greys and the accent are tuned for WCAG AA (4.5:1) as small text on paper and white. */
+  --color-faint: #706a61;
   --color-night-muted: #b9b3a7;
-  --color-accent: oklch(0.58 0.16 40);
+  --color-accent: oklch(0.55 0.16 40);
   --color-ok-bg: oklch(0.94 0.04 150);
   --color-ok-fg: oklch(0.4 0.1 150);
   --color-warn-bg: oklch(0.94 0.05 60);
@@ -101,13 +102,13 @@
 
 @keyframes pulse-ring {
   0% {
-    box-shadow: 0 0 0 0 rgb(26 24 19 / 0.35);
+    box-shadow: 0 0 0 0 rgb(246 244 239 / 0.45);
   }
   70% {
-    box-shadow: 0 0 0 14px rgb(26 24 19 / 0);
+    box-shadow: 0 0 0 14px rgb(246 244 239 / 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgb(26 24 19 / 0);
+    box-shadow: 0 0 0 0 rgb(246 244 239 / 0);
   }
 }
 .pulse-ring {

@@ -1,4 +1,5 @@
 import { AudienceTabs } from "@/components/audience-tabs";
+import { JsonLd } from "@/components/json-ld";
 import { MapSection } from "@/components/map/map-section";
 import { SearchBox } from "@/components/search-box";
 import {
@@ -16,6 +17,7 @@ import { CityPhoto, Container } from "@/components/ui";
 import { audiences, city, getPhoto } from "@/lib/data";
 import { t } from "@/lib/i18n";
 import { resolveLocale } from "@/lib/page";
+import { website } from "@/lib/structured-data";
 
 export default async function HomePage({ params }: PageProps<"/[locale]">) {
   const { locale, dict } = await resolveLocale(params);
@@ -24,6 +26,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
 
   return (
     <>
+      <JsonLd data={website(locale)} />
       <Container className="pt-5 pb-12 sm:pt-5">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-3">
@@ -67,7 +70,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           className="h-[clamp(300px,42vw,540px)] rounded-[20px]"
           imageClassName="object-[center_35%]"
         />
-        <FactsTable locale={locale} />
+        <FactsTable locale={locale} label={dict.home.facts} />
       </Container>
 
       <Container className="pt-24">

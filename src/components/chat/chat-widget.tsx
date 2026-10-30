@@ -8,6 +8,8 @@ import { Markdown } from "./markdown";
 interface Message {
   role: "user" | "assistant";
   content: string;
+  /** The visitor's 👍 / 👎 on an answer, sent once to /api/feedback. */
+  rating?: "up" | "down";
 }
 
 const STORAGE_KEY = "deoria-chat-v1";
@@ -36,6 +38,18 @@ export function ChatWidget({ locale, dict }: { locale: Locale; dict: Dictionary[
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const launcherRef = useRef<HTMLButtonElement>(null);
+  // The launcher only exists while the dialog is closed, so focus moves back to it after that render.
+  const returnFocus = useRef(false);
+  const close = useCallback(() => {
+    returnFocus.current = true;
+    setOpen(false);
+  }, []);
+
+  useEffect(() => {
+    if (open || !returnFocus.current) return;
+    returnFocus.current = false;
+    launcherRef.current?.focus();
+  }, [open]);
 
   useEffect(() => {
     try {
@@ -54,13 +68,12 @@ export function ChatWidget({ locale, dict }: { locale: Locale; dict: Dictionary[
     inputRef.current?.focus();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
-        setOpen(false);
-        launcherRef.current?.focus();
+        close();
       }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [open]);
+  }, [open, close]);
 
   useEffect(() => () => abortRef.current?.abort(), []);
 
@@ -167,6 +180,19 @@ export function ChatWidget({ locale, dict }: { locale: Locale; dict: Dictionary[
     [busy, dict, locale, messages],
   );
 
+  const rate = (index: number, rating: "up" | "down") => {
+    const answer = messages[index];
+    const question = messages[index - 1];
+    if (answer?.role !== "assistant" || question?.role !== "user" || answer.rating) return;
+    setMessages((prev) => prev.map((m, i) => (i === index ? { ...m, rating } : m)));
+    // Fire and forget: feedback must never get in the way of the conversation.
+    fetch("/api/feedback", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ rating, locale, question: question.content, answer: answer.content }),
+    }).catch(() => {});
+  };
+
   const reset = () => {
     abortRef.current?.abort();
     setMessages([]);
@@ -218,8 +244,7 @@ export function ChatWidget({ locale, dict }: { locale: Locale; dict: Dictionary[
               <button
                 type="button"
                 onClick={() => {
-                  setOpen(false);
-                  launcherRef.current?.focus();
+                  close();
                 }}
                 aria-label={dict.close}
                 className="grid size-8 place-items-center rounded-full text-lg leading-none hover:bg-paper/10"
@@ -258,11 +283,30 @@ export function ChatWidget({ locale, dict }: { locale: Locale; dict: Dictionary[
                   {m.content}
                 </div>
               ) : m.content ? (
-                <div
-                  key={i}
-                  className="max-w-[92%] rounded-2xl rounded-tl-md bg-white px-4 py-3 text-sm leading-relaxed text-ink-2"
-                >
-                  <Markdown text={m.content} />
+                <div key={i}>
+                  <div className="max-w-[92%] rounded-2xl rounded-tl-md bg-white px-4 py-3 text-sm leading-relaxed text-ink-2">
+                    <Markdown text={m.content} />
+                  </div>
+                  {!(busy && i === messages.length - 1) && messages[i - 1]?.role === "user" && (
+                    <div className="mt-1 flex h-7 items-center gap-0.5 pl-1">
+                      {m.rating ? (
+                        <span className="text-[11px] text-muted-2">{dict.thanks}</span>
+                      ) : (
+                        (["up", "down"] as const).map((rating) => (
+                          <button
+                            key={rating}
+                            type="button"
+                            onClick={() => rate(i, rating)}
+                            aria-label={rating === "up" ? dict.helpful : dict.notHelpful}
+                            title={rating === "up" ? dict.helpful : dict.notHelpful}
+                            className="grid size-7 place-items-center rounded-full text-[13px] opacity-60 transition hover:bg-ink/5 hover:opacity-100"
+                          >
+                            <span aria-hidden>{rating === "up" ? "👍" : "👎"}</span>
+                          </button>
+                        ))
+                      )}
+                    </div>
+                  )}
                 </div>
               ) : null,
             )}
