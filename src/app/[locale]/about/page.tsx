@@ -22,7 +22,12 @@ export default async function Page({ params }: PageProps<"/[locale]/about">) {
           <ul className="mt-4">
             {sources.map((s) => (
               <li key={s.id} className="border-t border-ink/10 py-3 text-sm leading-normal">
-                <a href={s.url} target="_blank" rel="noopener noreferrer" className="font-medium hover:text-accent">
+                <a
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-6 items-center font-medium hover:text-accent"
+                >
                   {s.name} ↗
                 </a>
                 <div className="text-[13px] text-muted-2">{s.usedFor}</div>
@@ -43,7 +48,12 @@ export default async function Page({ params }: PageProps<"/[locale]/about">) {
           <ul className="mt-6 grid gap-x-10 sm:grid-cols-2">
             {photos.map((p) => (
               <li key={p.id} className="border-t border-ink/10 py-3 text-sm leading-normal">
-                <a href={p.sourceUrl} target="_blank" rel="noopener noreferrer" className="font-medium hover:text-accent">
+                <a
+                  href={p.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-6 items-center font-medium hover:text-accent"
+                >
                   {t(p.caption, locale)} ↗
                 </a>
                 <div className="text-[13px] text-muted-2">

@@ -161,7 +161,7 @@ export default async function Page({ params }: PageProps<"/[locale]/explore/[slu
                 photo={photo}
                 locale={locale}
                 creditLabel={dict.photos.photoBy}
-                priority
+                hero
                 sizes="(min-width: 1024px) 560px, 100vw"
                 className="aspect-[4/5] rounded-2xl"
               />

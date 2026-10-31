@@ -14,7 +14,10 @@ export default defineConfig({
   reporter: process.env.CI ? [["github"], ["html", { open: "never" }]] : "list",
   use: {
     baseURL: `http://localhost:${PORT}`,
-    trace: "retain-on-failure",
+    // Small failure reports: a screenshot, and a trace for the first failed attempt only
+    // (keeping every retry's trace made the CI artifact close to 1 GB).
+    screenshot: "only-on-failure",
+    trace: "retain-on-first-failure",
   },
   projects: [
     { name: "desktop", use: { ...devices["Desktop Chrome"] } },

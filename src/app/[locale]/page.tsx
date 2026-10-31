@@ -65,7 +65,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           photo={hero}
           locale={locale}
           creditLabel={dict.photos.photoBy}
-          priority
+          hero
           sizes="(min-width: 1240px) 1176px, 100vw"
           className="h-[clamp(300px,42vw,540px)] rounded-[20px]"
           imageClassName="object-[center_35%]"
@@ -85,14 +85,20 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       </Container>
 
       <PlacesSection locale={locale} dict={dict} more />
-      <HistorySection locale={locale} dict={dict} />
-      <PeopleSection locale={locale} dict={dict} />
-      <GovernanceSection locale={locale} dict={dict} />
-      <TransportSection locale={locale} dict={dict} />
-      <MapSection locale={locale} dict={dict} />
-      <EmergencySection locale={locale} dict={dict} />
-      <CultureSection locale={locale} dict={dict} />
-      <GallerySection locale={locale} dict={dict} />
+      {[
+        HistorySection,
+        PeopleSection,
+        GovernanceSection,
+        TransportSection,
+        MapSection,
+        EmergencySection,
+        CultureSection,
+        GallerySection,
+      ].map((Section, i) => (
+        <div key={i} className="render-on-demand">
+          <Section locale={locale} dict={dict} />
+        </div>
+      ))}
     </>
   );
 }

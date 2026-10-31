@@ -12,10 +12,13 @@ import "../globals.css";
 
 const poppins = Poppins({
   subsets: ["latin", "devanagari"],
-  weight: ["300", "400", "500", "600", "700"],
+  // Only the weights in use (font-light/normal/medium/semibold); each is a preloaded file per script.
+  weight: ["300", "400", "500", "600"],
   variable: "--font-poppins",
   display: "swap",
 });
+
+const anchorScript = `(function(){var d=document.documentElement;function f(){if(location.hash.length>1)d.setAttribute("data-anchor","")}f();addEventListener("hashchange",f)})()`;
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -58,7 +61,12 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
 
   return (
     // data-scroll-behavior lets Next.js turn smooth scrolling (globals.css) off during page changes.
-    <html lang={locale} className={poppins.variable} data-scroll-behavior="smooth">
+    // suppressHydrationWarning: the head script below may add data-anchor before React hydrates.
+    <html lang={locale} className={poppins.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
+      <head>
+        {/* Runs before the body is parsed, so a #section link scrolls to fully rendered sections (globals.css). */}
+        <script dangerouslySetInnerHTML={{ __html: anchorScript }} />
+      </head>
       <body className="min-h-dvh">
         <a
           href="#main"

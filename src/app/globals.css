@@ -40,6 +40,11 @@
     color: inherit;
     text-decoration: none;
   }
+  /* Poppins ships 300–600 (layout.tsx); 600 is the bold face. */
+  b,
+  strong {
+    font-weight: 600;
+  }
   :focus-visible {
     outline: 2px solid var(--color-accent);
     outline-offset: 3px;
@@ -58,6 +63,23 @@
 @utility hatch-fine {
   background-color: var(--color-sand);
   background-image: repeating-linear-gradient(135deg, rgb(26 24 19 / 0.06) 0 1px, transparent 1px 7px);
+}
+
+/*
+ * Below-the-fold home page sections: the browser skips their layout and paint until they near the
+ * viewport, which shortened the first paint on phones. "auto" remembers each section's real height
+ * once rendered, so the scrollbar settles. Find-in-page still works; anchors are handled below.
+ */
+@utility render-on-demand {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}
+/*
+ * Opening a #section link: render everything normally, or the jump would aim at estimated
+ * heights and land in the wrong place. The flag is set by the inline script in layout.tsx.
+ */
+html[data-anchor] .render-on-demand {
+  content-visibility: visible;
 }
 
 @utility section-title {

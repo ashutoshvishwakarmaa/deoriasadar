@@ -94,6 +94,8 @@ export function Header({ locale, dict }: { locale: Locale; dict: Pick<Dictionary
                 <Link
                   key={l}
                   href={switchHref}
+                  // Rarely used; prefetching the other language on every page load wasted mobile data.
+                  prefetch={false}
                   onClick={rememberLocale}
                   hrefLang={l}
                   lang={l}

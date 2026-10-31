@@ -12,7 +12,7 @@ export function CityPhoto({
   photo,
   locale,
   sizes,
-  priority,
+  hero,
   className = "",
   imageClassName = "",
   creditLabel,
@@ -21,7 +21,11 @@ export function CityPhoto({
   photo: Photo;
   locale: Locale;
   sizes: string;
-  priority?: boolean;
+  /**
+   * The page's main photo, usually its Largest Contentful Paint: fetched at high priority and
+   * never lazy. (Next.js 16 deprecated `priority`; it only added a low-priority preload.)
+   */
+  hero?: boolean;
   className?: string;
   imageClassName?: string;
   creditLabel: string;
@@ -36,13 +40,14 @@ export function CityPhoto({
         alt={t(photo.caption, locale)}
         fill
         sizes={sizes}
-        priority={priority}
+        loading={hero ? "eager" : undefined}
+        fetchPriority={hero ? "high" : undefined}
         className={`${photo.fit === "contain" ? "object-contain" : "object-cover"} ${imageClassName}`}
         style={photo.focus ? { objectPosition: photo.focus } : undefined}
       />
-      <figcaption className="absolute right-2 bottom-2 max-w-[calc(100%-1rem)] truncate rounded-full bg-ink/55 px-2.5 py-1 text-[10px] text-paper backdrop-blur-sm">
+      <figcaption className="absolute right-2 bottom-2 max-w-[calc(100%-1rem)] truncate rounded-full bg-ink/55 px-2.5 text-[10px] leading-6 text-paper backdrop-blur-sm">
         {linkCredit ? (
-          <a href={photo.sourceUrl} target="_blank" rel="noopener noreferrer license" className="hover:underline">
+          <a href={photo.sourceUrl} target="_blank" rel="noopener noreferrer license" className="block truncate hover:underline">
             {credit}
           </a>
         ) : (

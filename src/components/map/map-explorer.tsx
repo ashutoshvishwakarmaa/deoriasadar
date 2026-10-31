@@ -2,13 +2,12 @@
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { MapPoint } from "./leaflet-map";
 
-const LeafletMap = dynamic(() => import("./leaflet-map"), {
-  ssr: false,
-  loading: () => <div className="hatch h-full min-h-[440px] w-full" />,
-});
+const placeholder = <div className="hatch h-full min-h-[440px] w-full" />;
+
+const LeafletMap = dynamic(() => import("./leaflet-map"), { ssr: false, loading: () => placeholder });
 
 export interface MapLayerItem {
   slug: string;
@@ -37,6 +36,26 @@ export function MapExplorer({
   headingLevel?: "h1" | "h2";
 }) {
   const [active, setActive] = useState(layers[0]?.id);
+  // Leaflet and its tiles load only when the map is about to scroll into view. On the home page it
+  // sits far down, and loading it up front delayed the first paint on phones.
+  const mapRef = useRef<HTMLDivElement>(null);
+  const [near, setNear] = useState(false);
+
+  useEffect(() => {
+    const el = mapRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setNear(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "100% 0px" },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
   const layer = layers.find((l) => l.id === active) ?? layers[0];
   const Heading = headingLevel;
 
@@ -69,8 +88,8 @@ export function MapExplorer({
         </div>
       </div>
       <div className="mt-7 grid gap-4 lg:grid-cols-[2fr_1fr]">
-        <div className="relative isolate min-h-[440px] overflow-hidden rounded-[20px] bg-sage">
-          <LeafletMap points={points} approxLabel={labels.approx} />
+        <div ref={mapRef} className="relative isolate min-h-[440px] overflow-hidden rounded-[20px] bg-sage">
+          {near ? <LeafletMap points={points} approxLabel={labels.approx} /> : placeholder}
         </div>
         <ul className="rounded-[20px] border border-ink/5 bg-white px-[22px] py-2" aria-live="polite">
           {layer.items.map((i) => (

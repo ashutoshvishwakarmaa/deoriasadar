@@ -24,10 +24,12 @@ export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const first = pathname.split("/")[1] ?? "";
   if (hasLocale(first)) {
-    // Unknown place slugs (e.g. a place that was removed) get a real 404 status. The page itself can
-    // only call notFound() after streaming has started, which would leave the status at 200.
+    // Unknown place slugs (e.g. a place that was removed) need a real 404 status, but the place page
+    // can only call notFound() after streaming has started, which would leave the status at 200. So
+    // they are rewritten to a path that only the [...missing] catch-all matches; it answers 404 with
+    // the site's own page. (Forcing the status here instead made Vercel serve its bare static 404.)
     if (isUnknownPlacePath(pathname, placeSlugs)) {
-      return NextResponse.rewrite(new URL(`/${first}/place-not-found`, request.url), { status: 404 });
+      return NextResponse.rewrite(new URL(`/${first}/place-not-found`, request.url));
     }
     return;
   }
