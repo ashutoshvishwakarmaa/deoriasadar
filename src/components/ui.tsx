@@ -33,18 +33,23 @@ export function CityPhoto({
   linkCredit?: boolean;
 }) {
   const credit = `${creditLabel}: ${photo.author} · ${photo.license}`;
+  const contain = photo.fit === "contain";
+  const image = (
+    <Image
+      src={photo.src}
+      alt={t(photo.caption, locale)}
+      fill
+      sizes={sizes}
+      loading={hero ? "eager" : undefined}
+      fetchPriority={hero ? "high" : undefined}
+      className={`${contain ? "object-contain" : "object-cover"} ${imageClassName}`}
+      style={photo.focus ? { objectPosition: photo.focus } : undefined}
+    />
+  );
   return (
-    <figure className={`relative m-0 overflow-hidden bg-sand ${className}`}>
-      <Image
-        src={photo.src}
-        alt={t(photo.caption, locale)}
-        fill
-        sizes={sizes}
-        loading={hero ? "eager" : undefined}
-        fetchPriority={hero ? "high" : undefined}
-        className={`${photo.fit === "contain" ? "object-contain" : "object-cover"} ${imageClassName}`}
-        style={photo.focus ? { objectPosition: photo.focus } : undefined}
-      />
+    <figure className={`relative m-0 overflow-hidden ${contain ? "bg-paper-2" : "bg-sand"} ${className}`}>
+      {/* Logos and emblems sit centred with breathing room, clear of the credit pill. */}
+      {contain ? <div className="absolute inset-x-6 top-5 bottom-10">{image}</div> : image}
       <figcaption className="absolute right-2 bottom-2 max-w-[calc(100%-1rem)] truncate rounded-full bg-ink/55 px-2.5 text-[10px] leading-6 text-paper backdrop-blur-sm">
         {linkCredit ? (
           <a href={photo.sourceUrl} target="_blank" rel="noopener noreferrer license" className="block truncate hover:underline">
@@ -93,7 +98,7 @@ export function SectionHeader({
 export function VerifiedBadge({ verified, dict }: { verified: boolean; dict: Dictionary["badges"] }) {
   return (
     <span
-      className={`rounded-full px-2 py-[3px] text-[11px] font-medium ${
+      className={`rounded-full px-2.5 py-1.25 text-xs leading-none font-medium ${
         verified ? "bg-ok-bg text-ok-fg" : "bg-warn-bg text-warn-fg"
       }`}
     >

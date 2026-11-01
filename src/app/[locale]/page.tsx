@@ -27,11 +27,11 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
   return (
     <>
       <JsonLd data={website(locale)} />
-      <Container className="pt-5 pb-12 sm:pt-5">
+      <Container className="pt-5 pb-[34px] sm:pt-5">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <span className="h-px w-[26px] bg-accent" aria-hidden />
-            <p className={`text-[12.5px] font-medium text-muted-2 uppercase ${hi ? "tracking-normal" : "tracking-[.14em]"}`}>
+            <p className={`text-[11px] font-medium text-muted-2 uppercase ${hi ? "tracking-normal" : "tracking-[.14em]"}`}>
               {dict.home.kicker}
             </p>
           </div>
@@ -40,7 +40,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           </p>
         </div>
 
-        <div className={`mt-[15px] flex flex-wrap items-start gap-x-9 gap-y-4 ${hi ? "pt-5" : "pt-1.5"}`}>
+        <div className={`flex flex-wrap items-start gap-x-9 gap-y-4 ${hi ? "mt-[15px] pt-5" : "-mt-3"}`}>
           <h1
             className={`text-[clamp(72px,15vw,208px)] font-semibold tracking-[-.055em] ${hi ? "leading-[1.15]" : "leading-[.92]"}`}
           >
@@ -54,8 +54,8 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           </div>
         </div>
 
-        <div className="mt-9 grid items-end gap-7 border-t border-ink/10 pt-[30px] md:grid-cols-[1.3fr_1fr] md:gap-12">
-          <p className="max-w-[540px] text-[19px] leading-relaxed font-light text-pretty text-ink-2">{dict.home.heroSub}</p>
+        <div className="mt-5 grid items-end gap-7 border-t border-ink/10 pt-[3px] md:grid-cols-[1.3fr_1fr] md:gap-12">
+          <p className="max-w-[540px] text-[17px] leading-relaxed font-light text-pretty text-ink-2">{dict.home.heroSub}</p>
           <SearchBox locale={locale} placeholder={dict.search.placeholder} button={dict.search.button} />
         </div>
       </Container>

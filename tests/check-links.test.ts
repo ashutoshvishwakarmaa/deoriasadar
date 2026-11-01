@@ -31,12 +31,15 @@ describe("check-links URL collection", () => {
 
   it("collects every source and photo link from the real content files", () => {
     const files = readDataFiles(path.join(process.cwd(), "src", "data"));
-    const urls = new Set(collectUrls(files).map((l) => l.url));
+    const links = collectUrls(files);
+    const urls = new Set(links.map((l) => l.url));
     const expected = [
       ...(files["sources.json"] as { url: string }[]).map((s) => s.url),
       ...(files["photos.json"] as { sourceUrl?: string; licenseUrl?: string }[]).flatMap((p) => [p.sourceUrl, p.licenseUrl]),
     ].filter(Boolean);
     for (const url of expected) expect(urls.has(url as string), url).toBe(true);
-    expect(urls.size).toBeLessThan(expected.length); // photos share licence URLs, so de-duplication must have kicked in
+    // Photos share licence URLs, so the input has repeats; each URL must still be reported once.
+    expect(new Set(expected).size).toBeLessThan(expected.length);
+    expect(links.length).toBe(urls.size);
   });
 });

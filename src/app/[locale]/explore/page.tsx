@@ -15,17 +15,17 @@ export default async function Page({ params }: PageProps<"/[locale]/explore">) {
     <>
       <JsonLd data={[breadcrumbs(locale, [{ name: dict.nav.explore, path: `/${locale}/explore` }]), placeList(locale)]} />
       <PageIntro kicker={dict.nav.explore} title={dict.sections.places} />
-      {mapCategories.map((category) => {
+      {mapCategories.map((category, i) => {
         const items = placesIn(category);
         if (items.length === 0) return null;
         return (
-          <Container key={category} className="pt-16">
+          <Container key={category} className={i === 0 ? "pt-8" : "pt-16"}>
             <h2 data-reveal className="border-b border-ink pb-3 text-2xl font-semibold tracking-[-.03em]">
               {dict.map.layers[category]}
             </h2>
             <div data-reveal-stagger className="mt-8 grid grid-cols-[repeat(auto-fill,minmax(min(100%,260px),1fr))] gap-7">
               {items.map((p) => (
-                <PlaceCard key={p.slug} place={p} locale={locale} />
+                <PlaceCard key={p.slug} place={p} locale={locale} aspect="aspect-[4/3]" />
               ))}
             </div>
           </Container>

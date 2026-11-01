@@ -72,7 +72,17 @@
     "unverified": "Not yet verified",
     "sources": "Sources",
     "callOffice": "Call",
+    "readMore": "Read more",
     "suggestEdit": "Suggest an edit"
+  },
+  "officialPopup": {
+    "details": "View details",
+    "about": "About",
+    "profiles": "Official profiles",
+    "search": "Search on other platforms",
+    "source": "source",
+    "localTip": "local tip",
+    "close": "Close"
   },
   "badges": {
     "verified": "Verified",

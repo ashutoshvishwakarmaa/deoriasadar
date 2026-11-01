@@ -287,9 +287,9 @@
   },
   {
     "id": "devaraha-baba-medical-college",
-    "src": "/images/photos/devaraha-baba-medical-college.jpg",
-    "width": 1000,
-    "height": 1000,
+    "src": "/images/photos/devaraha-baba-medical-college-logo.png",
+    "width": 496,
+    "height": 496,
     "caption": {
       "en": "Devaraha Baba Medical College, Deoria",
       "hi": "देवरहा बाबा मेडिकल कॉलेज, देवरिया (प्रतीक चिह्न)"
@@ -327,5 +327,110 @@
     "license": "Own photo",
     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
     "sourceUrl": "https://deoria.nic.in/"
+  },
+  {
+    "id": "district-hospital-medical-college",
+    "src": "/images/photos/district-hospital-medical-college.jpg",
+    "width": 1600,
+    "height": 1200,
+    "caption": {
+      "en": "Maharshi Devraha Baba Autonomous State Medical College campus, Deoria, to which the district hospital is linked",
+      "hi": "महर्षि देवरहा बाबा स्वशासी राज्य चिकित्सा महाविद्यालय परिसर, देवरिया, जिससे ज़िला अस्पताल संबद्ध है"
+    },
+    "author": "Deoria Guide",
+    "license": "Provided by site owner",
+    "licenseUrl": "https://deoria.nic.in/",
+    "sourceUrl": "https://deoria.nic.in/",
+    "focus": "50% 45%"
+  },
+  {
+    "id": "red-cross-deoria-logo",
+    "src": "/images/photos/red-cross-deoria-logo-round.png",
+    "width": 447,
+    "height": 447,
+    "caption": {
+      "en": "Logo of the Indian Red Cross Society, Deoria",
+      "hi": "इंडियन रेड क्रॉस सोसाइटी, देवरिया का प्रतीक चिह्न"
+    },
+    "author": "Deoria Guide",
+    "license": "Provided by site owner",
+    "licenseUrl": "https://deoria.nic.in/",
+    "sourceUrl": "https://deoria.nic.in/",
+    "fit": "contain"
+  },
+  {
+    "id": "upsrtc-bus-station-deoria",
+    "src": "/images/photos/upsrtc-bus-station-deoria.jpg",
+    "width": 1600,
+    "height": 1200,
+    "caption": {
+      "en": "UPSRTC bus station, Deoria",
+      "hi": "उ.प्र. परिवहन निगम बस स्टेशन, देवरिया"
+    },
+    "author": "Deoria Guide",
+    "license": "Provided by site owner",
+    "licenseUrl": "https://deoria.nic.in/how-to-reach/",
+    "sourceUrl": "https://deoria.nic.in/how-to-reach/",
+    "focus": "50% 45%"
+  },
+  {
+    "id": "bhatni-junction-sign",
+    "src": "/images/photos/bhatni-junction-sign.jpg",
+    "width": 1360,
+    "height": 1020,
+    "caption": {
+      "en": "Station sign on the platform at Bhatni Junction (BTT), at night",
+      "hi": "रात में भटनी जंक्शन (BTT) के प्लेटफ़ॉर्म पर स्टेशन बोर्ड"
+    },
+    "author": "Deoria Guide",
+    "license": "Provided by site owner",
+    "licenseUrl": "https://deoria.nic.in/how-to-reach/",
+    "sourceUrl": "https://deoria.nic.in/how-to-reach/",
+    "focus": "56% 45%"
+  },
+  {
+    "id": "collectorate-deoria",
+    "src": "/images/photos/collectorate-deoria.jpg",
+    "width": 1382,
+    "height": 578,
+    "caption": {
+      "en": "Collectorate building, Deoria",
+      "hi": "कलेक्ट्रेट भवन, देवरिया"
+    },
+    "author": "Deoria Guide",
+    "license": "Provided by site owner",
+    "licenseUrl": "https://deoria.nic.in/",
+    "sourceUrl": "https://deoria.nic.in/",
+    "focus": "40% 50%"
+  },
+  {
+    "id": "civil-court-deoria-gate",
+    "src": "/images/photos/civil-court-deoria-gate.jpg",
+    "width": 1029,
+    "height": 1035,
+    "caption": {
+      "en": "Entrance arch of the Civil Court (Diwani Nyayalaya), Deoria",
+      "hi": "दीवानी न्यायालय, देवरिया का प्रवेश द्वार"
+    },
+    "author": "Deoria Guide",
+    "license": "Provided by site owner",
+    "licenseUrl": "https://deoria.nic.in/",
+    "sourceUrl": "https://deoria.nic.in/",
+    "focus": "50% 30%"
+  },
+  {
+    "id": "nagar-palika-parishad-gate",
+    "src": "/images/photos/nagar-palika-parishad-gate.jpg",
+    "width": 700,
+    "height": 394,
+    "caption": {
+      "en": "Entrance gate of Nagar Palika Parishad, Deoria",
+      "hi": "नगर पालिका परिषद, देवरिया का प्रवेश द्वार"
+    },
+    "author": "Deoria Guide",
+    "license": "Provided by site owner",
+    "licenseUrl": "https://deoria.nic.in/",
+    "sourceUrl": "https://deoria.nic.in/",
+    "focus": "50% 40%"
   }
 ]

@@ -108,6 +108,7 @@ function runTopic(topic: (typeof topics)[number]) {
           name: o.name,
           details: o.meta,
           status: o.verified ? "verified" : "needs re-check — tell the user it is unconfirmed",
+          ...(o.profile && { background: o.profile.facts, profile_links: o.profile.links }),
         })),
         page: "/governance",
       };

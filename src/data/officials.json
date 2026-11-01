@@ -12,7 +12,41 @@
       "en": "BJP · elected 2024",
       "hi": "भाजपा · 2024"
     },
-    "verified": true
+    "verified": true,
+    "profile": {
+      "facts": [
+        {
+          "en": "He is the founder of the Jagriti Yatra, a train journey for young entrepreneurs, and the Jagriti Enterprise Centre – Purvanchal.",
+          "hi": "वे जागृति यात्रा, जो युवा उद्यमियों के लिए एक रेल यात्रा है, और जागृति एंटरप्राइज़ सेंटर – पूर्वांचल के संस्थापक हैं।",
+          "source": "https://en.wikipedia.org/wiki/Shashank_Mani"
+        },
+        {
+          "en": "He studied at Colvin Taluqdars’ College, Lucknow, and later at IIT Delhi.",
+          "hi": "उन्होंने कॉल्विन तालुकेदार्स कॉलेज, लखनऊ और बाद में आईआईटी दिल्ली से पढ़ाई की।",
+          "source": "https://en.wikipedia.org/wiki/Shashank_Mani"
+        },
+        {
+          "en": "He is the son of former Deoria MP Prakash Mani Tripathi.",
+          "hi": "वे देवरिया के पूर्व सांसद प्रकाश मणि त्रिपाठी के पुत्र हैं।",
+          "source": "https://en.wikipedia.org/wiki/Shashank_Mani"
+        },
+        {
+          "en": "His term in the 18th Lok Sabha began on 9 June 2024; he succeeded Ramapati Ram Tripathi as Deoria’s MP.",
+          "hi": "18वीं लोकसभा में उनका कार्यकाल 9 जून 2024 से शुरू हुआ; वे रमापति राम त्रिपाठी के बाद देवरिया के सांसद बने।",
+          "source": "https://prsindia.org/mptrack/18-lok-sabha/shashank-mani"
+        }
+      ],
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Shashank_Mani"
+        },
+        {
+          "label": "PRS MP Track",
+          "url": "https://prsindia.org/mptrack/18-lok-sabha/shashank-mani"
+        }
+      ]
+    }
   },
   {
     "role": {
@@ -27,7 +61,41 @@
       "en": "SP · elected 2024 · covers Bhatpar Rani, Salempur",
       "hi": "सपा · 2024 · भाटपार रानी, सलेमपुर"
     },
-    "verified": true
+    "verified": true,
+    "profile": {
+      "facts": [
+        {
+          "en": "He was born in Shivpur in Deoria district and is a graduate of Gorakhpur University.",
+          "hi": "उनका जन्म देवरिया ज़िले के शिवपुर में हुआ और वे गोरखपुर विश्वविद्यालय से स्नातक हैं।",
+          "source": "https://en.wikipedia.org/wiki/Ramashankar_Rajbhar"
+        },
+        {
+          "en": "He earlier represented Salempur in the 15th Lok Sabha (2009–2014), elected as a Bahujan Samaj Party candidate.",
+          "hi": "इससे पहले वे 15वीं लोकसभा (2009–2014) में बहुजन समाज पार्टी के उम्मीदवार के रूप में सलेमपुर से सांसद रहे।",
+          "source": "https://en.wikipedia.org/wiki/Ramashankar_Rajbhar"
+        },
+        {
+          "en": "During his first term he was a member of the Lok Sabha Committee on Water Resources.",
+          "hi": "अपने पहले कार्यकाल में वे लोकसभा की जल संसाधन समिति के सदस्य रहे।",
+          "source": "https://en.wikipedia.org/wiki/Ramashankar_Rajbhar"
+        },
+        {
+          "en": "In 2024 he won Salempur back for the Samajwadi Party, defeating the sitting BJP MP Ravindra Kushawaha.",
+          "hi": "2024 में उन्होंने समाजवादी पार्टी के टिकट पर भाजपा के मौजूदा सांसद रवींद्र कुशवाहा को हराकर सलेमपुर सीट फिर से जीती।",
+          "source": "https://en.wikipedia.org/wiki/Salempur_Lok_Sabha_constituency"
+        }
+      ],
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Ramashankar_Rajbhar"
+        },
+        {
+          "label": "PRS MP Track",
+          "url": "https://prsindia.org/mptrack/18-lok-sabha/ramashankar-rajbhar"
+        }
+      ]
+    }
   },
   {
     "role": {
@@ -42,7 +110,41 @@
       "en": "BJP · elected 2022",
       "hi": "भाजपा · 2022"
     },
-    "verified": true
+    "verified": true,
+    "profile": {
+      "facts": [
+        {
+          "en": "He was born in 1977 in Deoria district.",
+          "hi": "उनका जन्म 1977 में देवरिया ज़िले में हुआ।",
+          "source": "https://en.wikipedia.org/wiki/Shalabh_Mani_Tripathi"
+        },
+        {
+          "en": "He began his career in 1998 as a journalist with Dainik Jagran.",
+          "hi": "उन्होंने 1998 में दैनिक जागरण में पत्रकार के रूप में अपना करियर शुरू किया।",
+          "source": "https://en.wikipedia.org/wiki/Shalabh_Mani_Tripathi"
+        },
+        {
+          "en": "He joined the Bharatiya Janata Party in December 2016.",
+          "hi": "वे दिसंबर 2016 में भारतीय जनता पार्टी में शामिल हुए।",
+          "source": "https://en.wikipedia.org/wiki/Shalabh_Mani_Tripathi"
+        },
+        {
+          "en": "He was first elected MLA from Deoria in the 2022 Uttar Pradesh Assembly election.",
+          "hi": "वे 2022 के उत्तर प्रदेश विधानसभा चुनाव में पहली बार देवरिया से विधायक चुने गए।",
+          "source": "https://prsindia.org/mlatrack/shalabh-mani-tripathi"
+        }
+      ],
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Shalabh_Mani_Tripathi"
+        },
+        {
+          "label": "PRS MLA Track",
+          "url": "https://prsindia.org/mlatrack/shalabh-mani-tripathi"
+        }
+      ]
+    }
   },
   {
     "role": {
@@ -57,7 +159,41 @@
       "en": "BJP · elected 2022",
       "hi": "भाजपा · 2022"
     },
-    "verified": true
+    "verified": true,
+    "profile": {
+      "facts": [
+        {
+          "en": "He was born in 1952 in Pakahan village of Deoria district and earned an LLB from Banaras Hindu University in 1974.",
+          "hi": "उनका जन्म 1952 में देवरिया ज़िले के पकहां गांव में हुआ और उन्होंने 1974 में काशी हिंदू विश्वविद्यालय से एलएलबी किया।",
+          "source": "https://en.wikipedia.org/wiki/Surya_Pratap_Shahi"
+        },
+        {
+          "en": "He was first elected MLA from Kasia in 1985 and also won that seat in 1991 and 1996.",
+          "hi": "वे 1985 में पहली बार कसया से विधायक चुने गए और 1991 व 1996 में भी यह सीट जीती।",
+          "source": "https://en.wikipedia.org/wiki/Surya_Pratap_Shahi"
+        },
+        {
+          "en": "He was Uttar Pradesh’s Excise Minister from 1997 to 2002 and was appointed Agriculture Minister in the Yogi Adityanath government in March 2017.",
+          "hi": "वे 1997 से 2002 तक उत्तर प्रदेश के आबकारी मंत्री रहे और मार्च 2017 में योगी आदित्यनाथ सरकार में कृषि मंत्री बनाए गए।",
+          "source": "https://en.wikipedia.org/wiki/Surya_Pratap_Shahi"
+        },
+        {
+          "en": "He was president of the BJP’s Uttar Pradesh unit from 2010 to 2012.",
+          "hi": "वे 2010 से 2012 तक भाजपा उत्तर प्रदेश के प्रदेश अध्यक्ष रहे।",
+          "source": "https://en.wikipedia.org/wiki/Surya_Pratap_Shahi"
+        }
+      ],
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Surya_Pratap_Shahi"
+        },
+        {
+          "label": "PRS MLA Track",
+          "url": "https://prsindia.org/mlatrack/surya-pratap-shahi"
+        }
+      ]
+    }
   },
   {
     "role": {
@@ -72,7 +208,36 @@
       "en": "BJP · elected 2022",
       "hi": "भाजपा · 2022"
     },
-    "verified": true
+    "verified": true,
+    "profile": {
+      "facts": [
+        {
+          "en": "He is from Kushahari village in Deoria district and lists agriculture and business as his occupation.",
+          "hi": "वे देवरिया ज़िले के कुशहरी गांव के रहने वाले हैं और उन्होंने अपना पेशा कृषि और व्यवसाय बताया है।",
+          "source": "https://en.wikipedia.org/wiki/Surendra_Chaurasia"
+        },
+        {
+          "en": "He was elected to the District Panchayat in 2010.",
+          "hi": "वे 2010 में ज़िला पंचायत सदस्य चुने गए।",
+          "source": "https://en.wikipedia.org/wiki/Surendra_Chaurasia"
+        },
+        {
+          "en": "In 2022 he won Rampur Karkhana for the BJP, defeating the veteran Samajwadi Party leader Ghazala Lari.",
+          "hi": "2022 में उन्होंने भाजपा के टिकट पर सपा की वरिष्ठ नेता ग़ज़ाला लारी को हराकर रामपुर कारखाना सीट जीती।",
+          "source": "https://en.wikipedia.org/wiki/Rampur_Karkhana_Assembly_constituency"
+        }
+      ],
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Surendra_Chaurasia"
+        },
+        {
+          "label": "PRS MLA Track",
+          "url": "https://prsindia.org/mlatrack/surendra-chaurasia"
+        }
+      ]
+    }
   },
   {
     "role": {
@@ -87,7 +252,36 @@
       "en": "BJP · elected 2022",
       "hi": "भाजपा · 2022"
     },
-    "verified": true
+    "verified": true,
+    "profile": {
+      "facts": [
+        {
+          "en": "He comes from a farming family and completed his postgraduate studies at Madan Mohan Malviya P.G. College, Bhatpar Rani, in 1986.",
+          "hi": "वे किसान परिवार से हैं और उन्होंने 1986 में मदन मोहन मालवीय पीजी कॉलेज, भाटपार रानी से स्नातकोत्तर की पढ़ाई पूरी की।",
+          "source": "https://en.wikipedia.org/wiki/Sabhakunwar_Kushawaha"
+        },
+        {
+          "en": "He first contested a Vidhan Sabha election in 2002.",
+          "hi": "उन्होंने पहली बार 2002 में विधानसभा चुनाव लड़ा।",
+          "source": "https://en.wikipedia.org/wiki/Sabhakunwar_Kushawaha"
+        },
+        {
+          "en": "He became an MLA for the first time in 2022, winning Bhatpar Rani for the BJP by 18,082 votes over SP’s Ashutosh Upadhyay.",
+          "hi": "वे 2022 में पहली बार विधायक बने, जब उन्होंने भाजपा के टिकट पर सपा के आशुतोष उपाध्याय को 18,082 वोटों से हराकर भाटपार रानी सीट जीती।",
+          "source": "https://en.wikipedia.org/wiki/Sabhakunwar_Kushawaha"
+        }
+      ],
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Sabhakunwar_Kushawaha"
+        },
+        {
+          "label": "PRS MLA Track",
+          "url": "https://prsindia.org/mlatrack/sabhakunwar"
+        }
+      ]
+    }
   },
   {
     "role": {
@@ -102,7 +296,36 @@
       "en": "BJP · elected 2022",
       "hi": "भाजपा · 2022"
     },
-    "verified": true
+    "verified": true,
+    "profile": {
+      "facts": [
+        {
+          "en": "She was sworn in as a Minister of State in the Yogi Adityanath government on 25 March 2022.",
+          "hi": "25 मार्च 2022 को उन्होंने योगी आदित्यनाथ सरकार में राज्य मंत्री के रूप में शपथ ली।",
+          "source": "https://en.wikipedia.org/wiki/Vijay_Laxmi_Gautam"
+        },
+        {
+          "en": "She won Salempur in 2022 for the BJP by a margin of 16,608 votes.",
+          "hi": "उन्होंने 2022 में भाजपा के टिकट पर सलेमपुर सीट 16,608 वोटों के अंतर से जीती।",
+          "source": "https://en.wikipedia.org/wiki/Vijay_Laxmi_Gautam"
+        },
+        {
+          "en": "She holds a postgraduate degree.",
+          "hi": "वे स्नातकोत्तर हैं।",
+          "source": "https://prsindia.org/mlatrack/vijaylaxmi-gautam"
+        }
+      ],
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Vijay_Laxmi_Gautam"
+        },
+        {
+          "label": "PRS MLA Track",
+          "url": "https://prsindia.org/mlatrack/vijaylaxmi-gautam"
+        }
+      ]
+    }
   },
   {
     "role": {
@@ -117,7 +340,36 @@
       "en": "BJP · elected 2022",
       "hi": "भाजपा · 2022"
     },
-    "verified": true
+    "verified": true,
+    "profile": {
+      "facts": [
+        {
+          "en": "He was first elected MLA from Rudrapur for the BJP in 1991 and won the seat again in 1996, 2017 and 2022.",
+          "hi": "वे 1991 में पहली बार भाजपा के टिकट पर रुद्रपुर से विधायक चुने गए और 1996, 2017 व 2022 में भी यह सीट जीती।",
+          "source": "https://en.wikipedia.org/wiki/Jai_Prakash_Nishad_(Rudrapur)"
+        },
+        {
+          "en": "In the first Yogi Adityanath government (2017–2022) he held the Animal Husbandry and Fisheries portfolio.",
+          "hi": "योगी आदित्यनाथ की पहली सरकार (2017–2022) में उनके पास पशुपालन एवं मत्स्य विभाग था।",
+          "source": "https://en.wikipedia.org/wiki/Jai_Prakash_Nishad_(Rudrapur)"
+        },
+        {
+          "en": "He is a graduate.",
+          "hi": "वे स्नातक हैं।",
+          "source": "https://prsindia.org/mlatrack/jai-prakash-nishad-1"
+        }
+      ],
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Jai_Prakash_Nishad_(Rudrapur)"
+        },
+        {
+          "label": "PRS MLA Track",
+          "url": "https://prsindia.org/mlatrack/jai-prakash-nishad-1"
+        }
+      ]
+    }
   },
   {
     "role": {
@@ -132,7 +384,36 @@
       "en": "BJP · elected 2022",
       "hi": "भाजपा · 2022"
     },
-    "verified": true
+    "verified": true,
+    "profile": {
+      "facts": [
+        {
+          "en": "He was born in Deoria in 1970 and lists farming alongside politics as his occupation.",
+          "hi": "उनका जन्म 1970 में देवरिया में हुआ और उन्होंने राजनीति के साथ खेती को अपना पेशा बताया है।",
+          "source": "https://en.wikipedia.org/wiki/Deepak_Kumar_Mishra"
+        },
+        {
+          "en": "He holds a postgraduate degree.",
+          "hi": "वे स्नातकोत्तर हैं।",
+          "source": "https://prsindia.org/mlatrack/deepak-kumar-mishra"
+        },
+        {
+          "en": "He was first elected MLA from Barhaj in the 2022 Uttar Pradesh Assembly election.",
+          "hi": "वे 2022 के उत्तर प्रदेश विधानसभा चुनाव में पहली बार बरहज से विधायक चुने गए।",
+          "source": "https://prsindia.org/mlatrack/deepak-kumar-mishra"
+        }
+      ],
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Deepak_Kumar_Mishra"
+        },
+        {
+          "label": "PRS MLA Track",
+          "url": "https://prsindia.org/mlatrack/deepak-kumar-mishra"
+        }
+      ]
+    }
   },
   {
     "role": {
@@ -147,7 +428,32 @@
       "en": "Reported appointed May 2026; official site still lists previous DM",
       "hi": "मई 2026 में नियुक्ति की सूचना; आधिकारिक साइट पर अभी पूर्व ज़िलाधिकारी"
     },
-    "verified": true
+    "verified": true,
+    "profile": {
+      "facts": [
+        {
+          "en": "He is a 2015-batch IAS officer of the Uttar Pradesh cadre and is originally from Karnataka.",
+          "hi": "वे उत्तर प्रदेश कैडर के 2015 बैच के आईएएस अधिकारी हैं और मूल रूप से कर्नाटक के रहने वाले हैं।",
+          "source": "https://www.patrika.com/deoria-news/deoria-dm-madhusudan-hulgi-running-video-viral-cm-yogi-adityanath-visit-20603590"
+        },
+        {
+          "en": "He took charge as District Magistrate of Deoria in the first week of May 2026.",
+          "hi": "उन्होंने मई 2026 के पहले सप्ताह में देवरिया के ज़िलाधिकारी का पदभार संभाला।",
+          "source": "https://www.patrika.com/deoria-news/deoria-dm-madhusudan-hulgi-running-video-viral-cm-yogi-adityanath-visit-20603590"
+        },
+        {
+          "en": "Before this posting he was Special Secretary in the Uttar Pradesh Chief Minister’s Office.",
+          "hi": "इस तैनाती से पहले वे उत्तर प्रदेश मुख्यमंत्री कार्यालय में विशेष सचिव थे।",
+          "source": "https://www.patrika.com/deoria-news/deoria-dm-madhusudan-hulgi-running-video-viral-cm-yogi-adityanath-visit-20603590"
+        }
+      ],
+      "links": [
+        {
+          "label": "Deoria district website",
+          "url": "https://deoria.nic.in/"
+        }
+      ]
+    }
   },
   {
     "role": {
@@ -162,7 +468,11 @@
       "en": "Deoria Nagar Palika Parishad",
       "hi": "देवरिया नगर पालिका परिषद"
     },
-    "verified": true
+    "verified": true,
+    "profile": {
+      "facts": [],
+      "links": []
+    }
   },
   {
     "role": {

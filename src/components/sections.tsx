@@ -15,6 +15,7 @@ import { getDictionary, t, type Dictionary, type Locale } from "@/lib/i18n";
 import type { Place } from "@/lib/schema";
 import { CityPhoto, Container, PhotoPlaceholder, SectionHeader, VerifiedBadge } from "./ui";
 import { OfflineReady } from "./offline-status";
+import { OfficialCard } from "./official-card";
 
 interface SectionProps {
   locale: Locale;
@@ -26,7 +27,7 @@ interface SectionProps {
 }
 
 const kicker = (locale: Locale) => (locale === "hi" ? "tracking-normal" : "tracking-[.14em]");
-const top = (standalone?: boolean) => (standalone ? "pt-16 sm:pt-20" : "pt-28");
+const top = (standalone?: boolean) => (standalone ? "pt-12 sm:pt-[60px]" : "pt-28");
 
 export function FactsTable({ locale, label }: { locale: Locale; label: string }) {
   return (
@@ -63,7 +64,7 @@ export function FactsTable({ locale, label }: { locale: Locale; label: string })
   );
 }
 
-export function PlaceCard({ place, locale }: { place: Place; locale: Locale }) {
+export function PlaceCard({ place, locale, aspect = "aspect-[4/5]" }: { place: Place; locale: Locale; aspect?: string }) {
   const photo = getPhoto(place.photoId);
   return (
     <Link href={`/${locale}/explore/${place.slug}`} className="group flex flex-col gap-3.5">
@@ -75,13 +76,13 @@ export function PlaceCard({ place, locale }: { place: Place; locale: Locale }) {
             creditLabel={getDictionary(locale).photos.photoBy}
             linkCredit={false}
             sizes="(min-width: 1240px) 380px, (min-width: 640px) 45vw, 100vw"
-            className="aspect-[4/5]"
+            className={aspect}
             imageClassName="transition-transform duration-500 ease-out-expo group-hover:scale-[1.04]"
           />
         ) : (
           <PhotoPlaceholder
             label={place.photo ?? t(place.name, "en")}
-            className="aspect-[4/5] rounded-none transition-transform duration-500 ease-out-expo group-hover:scale-[1.04]"
+            className={`${aspect} rounded-none transition-transform duration-500 ease-out-expo group-hover:scale-[1.04]`}
           />
         )}
       </div>
@@ -89,10 +90,13 @@ export function PlaceCard({ place, locale }: { place: Place; locale: Locale }) {
         <span>{t(place.area, locale)}</span>
         {place.distance && <span>{t(place.distance, locale)}</span>}
       </div>
-      <h3 className="-mt-1.5 text-[21px] font-medium tracking-[-.02em] transition-colors group-hover:text-accent">
+      <h3 className="-mt-1.5 text-[18px] leading-snug font-medium tracking-[-.02em] transition-colors group-hover:text-accent">
         {t(place.name, locale)}
       </h3>
-      <p className="text-sm leading-relaxed text-pretty text-muted">{t(place.summary, locale)}</p>
+      <p className="-mt-3 line-clamp-2 text-sm leading-relaxed text-pretty text-muted">{t(place.summary, locale)}</p>
+      <span className="-mt-1.5 text-sm font-medium text-accent group-hover:underline">
+        {getDictionary(locale).place.readMore} →
+      </span>
     </Link>
   );
 }
@@ -161,18 +165,18 @@ export function PeopleSection({ locale, dict, standalone }: SectionProps) {
           {people.map((p) => {
             const portrait = getPhoto(p.photoId);
             return (
-              <li key={p.name.en} className="flex gap-[18px] border-t border-ink/10 py-[22px]">
+              <li key={p.name.en} className="flex gap-[22px] border-t border-ink/10 py-[28px]">
                 {portrait ? (
-                  <div className="relative size-[72px] flex-none overflow-hidden rounded-full bg-sand ring-1 ring-ink/10">
-                    <Image src={portrait.src} alt={t(p.name, locale)} fill sizes="72px" className="object-cover" />
+                  <div className="relative size-[90px] flex-none overflow-hidden rounded-full bg-sand ring-1 ring-ink/10">
+                    <Image src={portrait.src} alt={t(p.name, locale)} fill sizes="90px" className="object-cover" />
                   </div>
                 ) : (
-                  <div className="hatch-fine size-[72px] flex-none rounded-full" aria-hidden />
+                  <div className="hatch-fine size-[90px] flex-none rounded-full" aria-hidden />
                 )}
                 <div>
-                  <h3 className="text-[17px] font-medium">{t(p.name, locale)}</h3>
-                  <div className="mt-0.5 text-xs text-accent">{t(p.role, locale)}</div>
-                  <p className="mt-1.5 text-sm leading-normal text-pretty text-muted">{t(p.bio, locale)}</p>
+                  <h3 className="text-[19px] font-medium">{t(p.name, locale)}</h3>
+                  <div className="mt-1 text-[13px] text-accent">{t(p.role, locale)}</div>
+                  <p className="mt-2 text-[15px] leading-normal text-pretty text-muted">{t(p.bio, locale)}</p>
                 </div>
               </li>
             );
@@ -190,20 +194,31 @@ export function GovernanceSection({ locale, dict, standalone }: SectionProps) {
         <SectionHeader
           title={dict.sections.governance}
           as={standalone ? "h1" : "h2"}
-          aside={<p className="max-w-[440px] text-sm leading-relaxed text-muted">{t(city.governanceNote, locale)}</p>}
+          aside={<p className="max-w-[440px] text-[11px] leading-relaxed text-muted">{t(city.governanceNote, locale)}</p>}
         />
         <ul data-reveal-stagger className="mt-8 grid grid-cols-[repeat(auto-fit,minmax(min(100%,270px),1fr))] gap-3.5">
           {officials.map((o) => (
-            <li
-              key={o.role.en}
-              className="flex flex-col gap-1.5 rounded-[14px] border border-ink/5 bg-white px-[22px] py-5 transition duration-300 ease-out-expo hover:-translate-y-1 hover:shadow-[0_16px_32px_-18px_rgba(26,24,19,.18)]"
-            >
-              <div className="flex items-center justify-between gap-2.5">
-                <span className="text-xs text-muted-2">{t(o.role, locale)}</span>
-                <VerifiedBadge verified={o.verified} dict={dict.badges} />
-              </div>
-              <h3 className="text-lg font-medium tracking-tight">{t(o.name, locale)}</h3>
-              <p className="text-[13px] leading-normal text-muted">{t(o.meta, locale)}</p>
+            <li key={o.role.en}>
+              <OfficialCard
+                labels={dict.officialPopup}
+                profile={
+                  o.profile && {
+                    name: t(o.name, locale),
+                    role: t(o.role, locale),
+                    meta: t(o.meta, locale),
+                    searchName: o.name.en.replace(/, IAS$/, ""),
+                    facts: o.profile.facts.map((f) => ({ text: t(f, locale), source: f.source })),
+                    links: o.profile.links,
+                  }
+                }
+              >
+                <div className="flex items-center justify-between gap-2.5">
+                  <span className="text-[9.5px] text-muted-2">{t(o.role, locale)}</span>
+                  <VerifiedBadge verified={o.verified} dict={dict.badges} />
+                </div>
+                <h3 className="text-[16px] font-medium tracking-tight">{t(o.name, locale)}</h3>
+                <p className="text-[13px] leading-normal text-muted">{t(o.meta, locale)}</p>
+              </OfficialCard>
             </li>
           ))}
         </ul>
@@ -219,13 +234,54 @@ export function TransportSection({ locale, dict, standalone }: SectionProps) {
         <SectionHeader title={dict.sections.transport} as={standalone ? "h1" : "h2"} />
         <div
           data-reveal-stagger
-          className="mt-8 grid grid-cols-[repeat(auto-fit,minmax(min(100%,260px),1fr))] border-t border-ink"
+          className={`mt-8 grid grid-cols-[repeat(auto-fit,minmax(min(100%,260px),1fr))] ${standalone ? "gap-4" : "border-t border-ink"}`}
         >
           {transport.map((m) => (
-            <div key={m.mode.en} className="flex flex-col gap-2.5 py-6 pr-6 transition-[padding] duration-300 hover:pl-2">
+            <div
+              key={m.mode.en}
+              className={
+                standalone
+                  ? "flex flex-col gap-2.5 rounded-[14px] border border-ink/5 bg-white p-6"
+                  : "flex flex-col gap-2.5 py-6 pr-6 transition-[padding] duration-300 hover:pl-2"
+              }
+            >
               <div className="text-[13px] text-muted-2">{t(m.mode, locale)}</div>
               <h3 className="text-2xl font-semibold tracking-[-.03em]">{t(m.head, locale)}</h3>
               <p className="text-sm leading-relaxed text-pretty text-muted">{t(m.body, locale)}</p>
+              {standalone && m.details && m.details.length > 0 && (
+                <ul className="mt-2 flex flex-col gap-2 border-t border-ink/10 pt-3">
+                  {m.details.map((d) => (
+                    <li key={d.en} className="flex gap-2 text-[13px] leading-relaxed text-pretty text-ink-2">
+                      <span className="mt-[9px] size-1 flex-none rounded-full bg-accent" aria-hidden />
+                      <span>
+                        {t(d, locale)}{" "}
+                        {d.source ? (
+                          <a href={d.source} target="_blank" rel="noopener noreferrer" className="text-[11px] text-accent hover:underline">
+                            [{dict.officialPopup.source}]
+                          </a>
+                        ) : (
+                          <span className="text-[11px] text-muted-2">[{dict.officialPopup.localTip}]</span>
+                        )}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {standalone && m.links && m.links.length > 0 && (
+                <div className="mt-auto flex flex-wrap gap-2 pt-3">
+                  {m.links.map((l) => (
+                    <a
+                      key={l.url}
+                      href={l.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-full bg-sand px-3 py-1.5 text-xs hover:text-accent"
+                    >
+                      {l.label} ↗
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>

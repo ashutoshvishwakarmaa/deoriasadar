@@ -102,10 +102,24 @@ export const officialSchema = z.object({
   name: localized,
   meta: localized,
   verified: z.boolean(),
+  /** Sourced facts and public profile links, shown in a popup when the card is clicked. */
+  profile: z
+    .object({
+      facts: z.array(localized.extend({ source: z.url() })),
+      links: z.array(z.object({ label: z.string().min(1), url: z.url() })),
+    })
+    .optional(),
 });
 export type Official = z.infer<typeof officialSchema>;
 
-export const transportSchema = z.object({ mode: localized, head: localized, body: localized });
+export const transportSchema = z.object({
+  mode: localized,
+  head: localized,
+  body: localized,
+  /** Extra detail lines, shown on the dedicated Getting around page. No source = a local tip from the site owner. */
+  details: z.array(localized.extend({ source: z.url().optional() })).optional(),
+  links: z.array(z.object({ label: z.string().min(1), url: z.url() })).optional(),
+});
 
 export const emergencySchema = z.object({
   number: z.string().regex(/^[0-9-]+$/),

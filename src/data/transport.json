@@ -11,7 +11,34 @@
     "body": {
       "en": "North Eastern Railway, in the city centre. Bhatni Junction (BTT) is nearby for more connections.",
       "hi": "पूर्वोत्तर रेलवे, शहर के बीच। अधिक ट्रेनों के लिए पास में भटनी जंक्शन (BTT)।"
-    }
+    },
+    "details": [
+      {
+        "en": "The station is on the busy Gorakhpur–Siwan main line and has 3 platforms.",
+        "hi": "स्टेशन व्यस्त गोरखपुर–सीवान मुख्य लाइन पर है और यहाँ 3 प्लेटफ़ॉर्म हैं।",
+        "source": "https://en.wikipedia.org/wiki/Deoria_Sadar_railway_station"
+      },
+      {
+        "en": "The district administration lists direct trains to New Delhi, Mumbai, Kolkata, Lucknow, Varanasi, Gorakhpur and Chhapra.",
+        "hi": "ज़िला प्रशासन के अनुसार यहाँ से नई दिल्ली, मुंबई, कोलकाता, लखनऊ, वाराणसी, गोरखपुर और छपरा के लिए सीधी ट्रेनें हैं।",
+        "source": "https://deoria.nic.in/how-to-reach/"
+      },
+      {
+        "en": "Gorakhpur Junction is about 46 km away by rail.",
+        "hi": "गोरखपुर जंक्शन रेल मार्ग से लगभग 46 किमी दूर है।",
+        "source": "https://erail.in/trains-between-stations/gorakhpur-jn-GKP/deoria-sadar-DEOS"
+      }
+    ],
+    "links": [
+      {
+        "label": "NTES live train status",
+        "url": "https://enquiry.indianrail.gov.in/mntes/"
+      },
+      {
+        "label": "IRCTC ticket booking",
+        "url": "https://www.irctc.co.in/"
+      }
+    ]
   },
   {
     "mode": {
@@ -23,9 +50,32 @@
       "hi": "गोरखपुर · GOP"
     },
     "body": {
-      "en": "Nearest airport with regular flights, about 50 km by road. Kushinagar International (KBK) is closer, roughly 32 km.",
-      "hi": "नियमित उड़ानों वाला निकटतम हवाई अड्डा, सड़क से लगभग 50 किमी। कुशीनगर अंतरराष्ट्रीय (KBK) लगभग 32 किमी।"
-    }
+      "en": "Nearest airport with regular flights, about 53 km by road. Kushinagar International (KBK) is closer but has no scheduled flights.",
+      "hi": "नियमित उड़ानों वाला निकटतम हवाई अड्डा, सड़क से लगभग 53 किमी। कुशीनगर अंतरराष्ट्रीय (KBK) पास है, पर वहाँ से नियमित उड़ानें नहीं हैं।"
+    },
+    "details": [
+      {
+        "en": "Direct flights from Gorakhpur include Delhi, Mumbai, Bengaluru, Hyderabad and Kolkata; check airline sites for current routes.",
+        "hi": "गोरखपुर से दिल्ली, मुंबई, बेंगलुरु, हैदराबाद और कोलकाता की सीधी उड़ानें हैं; मौजूदा रूट के लिए एयरलाइन की वेबसाइट देखें।",
+        "source": "https://en.wikipedia.org/wiki/Gorakhpur_Airport"
+      },
+      {
+        "en": "Kushinagar International Airport has had no scheduled flights since November 2023.",
+        "hi": "कुशीनगर अंतरराष्ट्रीय हवाई अड्डे से नवंबर 2023 के बाद से कोई नियमित उड़ान नहीं चल रही है।",
+        "source": "https://en.wikipedia.org/wiki/Kushinagar_International_Airport"
+      },
+      {
+        "en": "Gorakhpur Airport is on the Gorakhpur–Kushinagar highway, about 7 km from Gorakhpur railway station.",
+        "hi": "गोरखपुर हवाई अड्डा गोरखपुर–कुशीनगर राजमार्ग पर, गोरखपुर रेलवे स्टेशन से लगभग 7 किमी दूर है।",
+        "source": "https://www.aai.aero/en/airports/gorakhpur"
+      }
+    ],
+    "links": [
+      {
+        "label": "Gorakhpur Airport (AAI)",
+        "url": "https://www.aai.aero/en/airports/gorakhpur"
+      }
+    ]
   },
   {
     "mode": {
@@ -39,7 +89,30 @@
     "body": {
       "en": "State buses to Gorakhpur, Kushinagar, Lucknow and towns across the Bihar border.",
       "hi": "गोरखपुर, कुशीनगर, लखनऊ और बिहार सीमा के कस्बों के लिए बसें।"
-    }
+    },
+    "details": [
+      {
+        "en": "UPSRTC and private buses run from the Deoria bus station to Lucknow, Kanpur, Prayagraj, Azamgarh, Kushinagar and New Delhi.",
+        "hi": "देवरिया बस स्टेशन से UPSRTC और निजी बसें लखनऊ, कानपुर, प्रयागराज, आज़मगढ़, कुशीनगर और नई दिल्ली जाती हैं।",
+        "source": "https://deoria.nic.in/how-to-reach/"
+      },
+      {
+        "en": "National Highway 727A passes through Deoria, linking Gorakhpur, Deoria and Salempur to Mairwa in Bihar.",
+        "hi": "राष्ट्रीय राजमार्ग 727A देवरिया से होकर गुज़रता है और गोरखपुर, देवरिया और सलेमपुर को बिहार के मैरवा से जोड़ता है।",
+        "source": "https://en.wikipedia.org/wiki/National_Highway_727A_(India)"
+      },
+      {
+        "en": "Deoria is about 317 km from Lucknow, the state capital.",
+        "hi": "देवरिया राज्य की राजधानी लखनऊ से लगभग 317 किमी दूर है।",
+        "source": "https://en.wikipedia.org/wiki/Deoria,_Uttar_Pradesh"
+      }
+    ],
+    "links": [
+      {
+        "label": "UPSRTC online bus reservation",
+        "url": "https://www.onlineupsrtc.co.in/"
+      }
+    ]
   },
   {
     "mode": {
@@ -53,6 +126,21 @@
     "body": {
       "en": "No metro. Shared autos and e-rickshaws cover the city; book a taxi for Kushinagar or Gorakhpur.",
       "hi": "मेट्रो नहीं है। शहर में साझा ऑटो और ई-रिक्शा; बाहर के लिए टैक्सी।"
-    }
+    },
+    "details": [
+      {
+        "en": "Deoria Sadar station has an auto-rickshaw stand and parking.",
+        "hi": "देवरिया सदर स्टेशन पर ऑटो-रिक्शा स्टैंड और पार्किंग की सुविधा है।",
+        "source": "https://en.wikipedia.org/wiki/Deoria_Sadar_railway_station"
+      },
+      {
+        "en": "There is plenty of parking around the city, including paid parking.",
+        "hi": "शहर में पार्किंग की अच्छी सुविधा है, जिसमें पेड पार्किंग भी शामिल है।"
+      },
+      {
+        "en": "Agree on the fare with the driver before you set off.",
+        "hi": "सवारी शुरू करने से पहले ड्राइवर से किराया तय कर लें।"
+      }
+    ]
   }
 ]

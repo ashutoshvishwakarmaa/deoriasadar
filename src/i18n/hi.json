@@ -72,7 +72,17 @@
     "unverified": "अभी सत्यापित नहीं",
     "sources": "स्रोत",
     "callOffice": "कॉल करें",
+    "readMore": "और पढ़ें",
     "suggestEdit": "सुधार का सुझाव दें"
+  },
+  "officialPopup": {
+    "details": "विवरण देखें",
+    "about": "परिचय",
+    "profiles": "आधिकारिक प्रोफ़ाइल",
+    "search": "अन्य प्लेटफ़ॉर्म पर खोजें",
+    "source": "स्रोत",
+    "localTip": "स्थानीय जानकारी",
+    "close": "बंद करें"
   },
   "badges": {
     "verified": "सत्यापित",

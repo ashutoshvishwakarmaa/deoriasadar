@@ -252,7 +252,8 @@
       "hi": "मुख्य सरकारी अस्पताल, अब मेडिकल कॉलेज से संबद्ध। सत्यापित फ़ोन नंबर अभी एकत्र किए जा रहे हैं।"
     },
     "verified": null,
-    "sources": ["wiki-district"]
+    "sources": ["wiki-district"],
+    "photoId": "district-hospital-medical-college"
   },
   {
     "slug": "blood-bank",
@@ -272,7 +273,8 @@
       "hi": "स्थान और संपर्क नंबर अभी सत्यापित नहीं हैं। आपात स्थिति में 108 या ज़िला अस्पताल से संपर्क करें।"
     },
     "verified": null,
-    "sources": []
+    "sources": [],
+    "photoId": "red-cross-deoria-logo"
   },
   {
     "slug": "deoria-sadar-station",
@@ -315,7 +317,8 @@
     "coords": [26.3897, 83.9306],
     "coordsApprox": true,
     "verified": "2026-09-28",
-    "sources": ["deoria-how-to-reach"]
+    "sources": ["deoria-how-to-reach"],
+    "photoId": "bhatni-junction-sign"
   },
   {
     "slug": "roadways-bus-stand",
@@ -335,7 +338,8 @@
       "hi": "गोरखपुर, कुशीनगर, लखनऊ और बिहार सीमा के कस्बों के लिए बसें।"
     },
     "verified": "2026-09-28",
-    "sources": ["deoria-how-to-reach"]
+    "sources": ["deoria-how-to-reach"],
+    "photoId": "upsrtc-bus-station-deoria"
   },
   {
     "slug": "collectorate",
@@ -355,7 +359,8 @@
     },
     "phone": "05568-222316",
     "verified": "2026-09-28",
-    "sources": ["deoria-history"]
+    "sources": ["deoria-history"],
+    "photoId": "collectorate-deoria"
   },
   {
     "slug": "nagar-palika-parishad",
@@ -374,7 +379,8 @@
       "hi": "शहर के लिए गृहकर, जल, जन्म-मृत्यु प्रमाणपत्र और वार्ड शिकायतें।"
     },
     "verified": "2026-09-28",
-    "sources": ["wiki-district"]
+    "sources": ["wiki-district"],
+    "photoId": "nagar-palika-parishad-gate"
   },
   {
     "slug": "district-sessions-court",
@@ -394,7 +400,8 @@
       "hi": "ज़िला न्यायालय, 12 सितंबर 1946 को स्थापित।"
     },
     "verified": "2026-09-28",
-    "sources": ["deoria-history"]
+    "sources": ["deoria-history"],
+    "photoId": "civil-court-deoria-gate"
   },
   {
     "slug": "baba-raghav-das-pg-college",
