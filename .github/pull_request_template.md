@@ -4,7 +4,7 @@
 
 ## Content checklist
 
-<!-- Code-only PR? Delete this section. See CONTENT.md for help. -->
+<!-- Code-only PR? Delete this section. -->
 
 - [ ] Every text field has both `en` and `hi` filled in
 - [ ] `verified` is today's date (`YYYY-MM-DD`) if I checked the facts, or left `null`

@@ -1,15 +1,13 @@
 # Deoria City Guide
 
-A bilingual (English / हिन्दी) guide to Deoria, Uttar Pradesh: places, history, people, officials, transport, a layered map, offline emergency helplines and a Claude-powered assistant that answers only from the guide's own data.
-
-Built from the claude.ai/design project _Deoria City Guide_. The original HTML prototype is kept in `design/prototype.html` for reference.
+A bilingual (English / हिन्दी) guide to Deoria, Uttar Pradesh: places, history, people, officials (with sourced profile popups), transport, a layered map, offline emergency helplines and a Claude-powered assistant that answers only from the guide's own data. An "About me" page introduces the person who builds it.
 
 ## Stack
 
 | Layer      | Choice                                                                                        |
 | ---------- | --------------------------------------------------------------------------------------------- |
 | Framework  | Next.js 16 (App Router, Cache Components, Turbopack), React 19, TypeScript                    |
-| Styling    | Tailwind CSS v4 with the design's tokens in `src/app/globals.css`, Poppins                    |
+| Styling    | Tailwind CSS v4 with design tokens in `src/app/globals.css`, Poppins                          |
 | Content    | JSON files in `src/data`, validated with Zod at build time                                    |
 | Assistant  | Claude (`claude-opus-5-5`) via `@anthropic-ai/sdk`, tool use over the JSON                    |
 | Map        | Leaflet + OpenStreetMap                                                                       |
@@ -55,9 +53,9 @@ npm run dev                  # http://localhost:3000
 
 - `npm test`: unit and API-route tests (Vitest). No server or keys needed.
 - `npm run build && npm run test:e2e`: browser tests (Playwright, desktop and phone size) against the production build on port 3100. They cover language routing, search, offline mode, the assistant (with a mocked API, so no key or cost), share cards, structured data, and axe accessibility checks (WCAG 2.1 AA). Run `npx playwright install chromium` once first. A failed run leaves a report in `playwright-report/`.
-- `npm run check:links`: checks every external link in the content. It runs weekly in CI too.
+- `npm run check:links`: checks every external link in the content. A few sites refuse automated checks (Indian government and railway sites block requests from outside India, and LinkedIn answers bots with status 999); the list is in `scripts/check-links.mjs`, and a failure on those counts as a warning, not a broken link.
 
-CI (`.github/workflows/ci.yml`) runs typecheck, lint, formatting, unit tests, the build and the browser tests on every push and pull request.
+CI (`.github/workflows/ci.yml`) runs typecheck, lint, formatting, unit tests, the build and the browser tests on every push to `main` and every pull request. The link check (`.github/workflows/links.yml`) runs on every push to `main`.
 
 ## Project layout
 
@@ -66,12 +64,14 @@ src/
   app/
     [locale]/              en + hi routes (home, explore/[slug], history, people,
                            governance, transport, map, emergency, culture, gallery,
-                           about, search), error/loading/404 pages, share cards
+                           about, about/creator, search), error/loading/404 pages,
+                           share cards
     api/chat/              Streaming assistant (NDJSON) with tool use
     api/feedback/          👍 / 👎 on assistant answers
     api/corrections/       "Suggest a correction" form → Redis + email (Resend), Turnstile
     sitemap.ts robots.ts manifest.ts
-  components/              Header, sections, map, chat widget, forms
+  components/              Header, sections, official profile popup, map, chat widget,
+                           forms, anchor-scroll (keeps #section links on target)
   data/*.json              ← all city content lives here
   i18n/{en,hi}.json        UI strings
   lib/
@@ -90,24 +90,24 @@ assets/fonts/              Poppins TTFs for share cards (OFL)
 scripts/                   Link checker, feedback report
 tests/                     Vitest suites
 e2e/                       Playwright suites
-docs/hindi-review.md       Hindi strings for a native-speaker review
-CONTENT.md                 Guide for non-developer editors
-.github/                   CI, weekly link check, correction issue form, PR checklist
+.github/                   CI, link check, correction issue form, PR checklist
 ```
 
 ## Editing content
 
 All content is in `src/data/*.json`. Every text field has `en` and `hi` values.
 
-**Editors who are not developers:** see [CONTENT.md](CONTENT.md). It covers editing on github.com, the correction issue form (linked as "Suggest an edit" from every place page) and typing Hindi. A native-speaker review sheet for the Hindi text is in [docs/hindi-review.md](docs/hindi-review.md).
+**Editors who are not developers** can edit these files directly on github.com, or report a mistake with the correction issue form (linked as "Suggest an edit" from every place page).
 
 - **Places** (`places.json`): `slug`, `categories` (`faith`, `health`, `transport`, `offices`, `education`), `name`, `area`, `summary`, plus optional `distance`, `tips`, `phone` and `coords`. Set `coordsApprox: true` unless the coordinates are surveyed. `verified` is the date it was last checked (`YYYY-MM-DD`) or `null`, and `sources` lists ids from `sources.json`. `aliases` holds extra spellings for search.
-- **Officials** (`officials.json`): set `verified: false` until confirmed. The site shows a "Re-check" badge, and the assistant tells users the entry is unconfirmed.
+- **Officials** (`officials.json`): set `verified: false` until confirmed. The site shows a "Re-check" badge, and the assistant tells users the entry is unconfirmed. The optional `profile` adds the popup behind "View details": `facts` (each with `en`, `hi` and a `source` URL) and `links` (`label` + `url`) to public profiles. Leave out anything sources disagree on. The assistant can also answer from these facts.
+- **Transport** (`transport.json`): the optional `details` and `links` show only on the Getting around page. A detail with a `source` shows a [source] link; one without is shown as a "local tip" from the site owner.
+- **About me** (`creator.json`): the creator page: photo, role, bio paragraphs, the Deoria connection, experience (with each company's website) and contact details.
 - **Emergency numbers** (`emergency.json`): exactly one entry must have `featured: true`.
 
 `npm run build` and `npm test` validate every file. Invalid content fails with a message naming the file and field.
 
-**Photos** (`photos.json`): each entry has an image under `public/images/photos/`, a bilingual caption, the author, the licence, and a link to its source. Places use one through `photoId`. The home hero (`heroPhoto`) and the gallery are set in `city.json`. Current photos come from Wikimedia Commons under CC BY / BY-SA / CC0. Their credits show on each image and on the About page, so keep the author and licence fields accurate when you add photos.
+**Photos** (`photos.json`): each entry has an image under `public/images/photos/`, a bilingual caption, the author, the licence, and a link to its source. Places use one through `photoId`. The home hero (`heroPhoto`) and the gallery are set in `city.json`. Photos come from Wikimedia Commons (CC BY / BY-SA / CC0), the district website, or the site owner ("Provided by site owner"). Their credits show on each image and on the About page, so keep the author and licence fields accurate when you add photos. For a logo or emblem, set `"fit": "contain"` so it shows whole, centred, instead of being cropped.
 
 ## The assistant
 

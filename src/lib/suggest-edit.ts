@@ -1,4 +1,4 @@
-/** Public repository; content corrections are filed as issues here (see CONTENT.md). */
+/** Public repository; content corrections are filed as issues here. */
 export const REPO_URL = "https://github.com/ashutoshvishwakarmaa/deoriasadar";
 
 /** Issue form in .github/ISSUE_TEMPLATE; the query keys below are the ids of its fields. */

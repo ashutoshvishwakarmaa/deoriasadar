@@ -7,7 +7,6 @@ import type { Dictionary, Locale } from "@/lib/i18n";
 
 const NAV_KEYS = ["explore", "history", "people", "governance", "transport", "map", "emergency", "gallery", "me"] as const;
 
-/** Most links go to /{locale}/{key}; "me" is the creator page. */
 const pathFor = (key: string) => (key === "me" ? "about/creator" : key);
 
 export function Header({ locale, dict }: { locale: Locale; dict: Pick<Dictionary, "brand" | "nav"> }) {
@@ -30,7 +29,6 @@ export function Header({ locale, dict }: { locale: Locale; dict: Pick<Dictionary
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close the mobile menu after navigating.
   const [lastPath, setLastPath] = useState(pathname);
   if (lastPath !== pathname) {
     setLastPath(pathname);

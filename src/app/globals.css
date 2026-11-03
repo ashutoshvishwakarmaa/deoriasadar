@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/* Design tokens from the Deoria City Guide design (claude.ai/design). */
 @theme {
   --color-paper: #f6f4ef;
   --color-paper-2: #f0ede6;

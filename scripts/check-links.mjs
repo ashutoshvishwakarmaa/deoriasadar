@@ -41,7 +41,6 @@ export function collectUrls(files) {
   return [...found].map(([url, refs]) => ({ url, refs }));
 }
 
-/** Read and parse every JSON file in a directory, keyed by file name. */
 export function readDataFiles(dir) {
   /** @type {Record<string, unknown>} */
   const files = {};
@@ -54,14 +53,12 @@ export function readDataFiles(dir) {
 }
 
 async function request(url, method) {
-  // `redirect: "follow"` is the default; res.url is the final location after redirects.
   const res = await fetch(url, {
     method,
     redirect: "follow",
     headers: { "User-Agent": USER_AGENT, Accept: "text/html,application/xhtml+xml,*/*;q=0.8" },
     signal: AbortSignal.timeout(TIMEOUT_MS),
   });
-  // Don't download bodies we don't need.
   await res.body?.cancel().catch(() => {});
   return res;
 }

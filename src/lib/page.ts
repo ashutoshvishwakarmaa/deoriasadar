@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getDictionary, hasLocale, type Dictionary, type Locale } from "./i18n";
 
-/** Resolve and validate the `[locale]` segment for a page. */
 export async function resolveLocale(params: Promise<{ locale: string }>): Promise<{ locale: Locale; dict: Dictionary }> {
   const { locale } = await params;
   if (!hasLocale(locale)) notFound();
