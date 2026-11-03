@@ -54,7 +54,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           </div>
         </div>
 
-        <div className="mt-5 grid items-end gap-7 border-t border-ink/10 pt-[3px] md:grid-cols-[1.3fr_1fr] md:gap-12">
+        <div className="mt-5 grid grid-cols-1 items-end gap-7 border-t border-ink/10 pt-[3px] md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] md:gap-12">
           <p className="max-w-[540px] text-[17px] leading-relaxed font-light text-pretty text-ink-2">{dict.home.heroSub}</p>
           <SearchBox locale={locale} placeholder={dict.search.placeholder} button={dict.search.button} />
         </div>

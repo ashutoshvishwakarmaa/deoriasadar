@@ -58,7 +58,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Pick<Dictionary
         scrolled ? "shadow-[0_4px_24px_rgba(26,24,19,.08)]" : ""
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-[1240px] items-center gap-7 px-4 sm:h-[68px] sm:px-8">
+      <div className="mx-auto flex h-16 max-w-[1240px] items-center gap-4 px-4 sm:gap-7 sm:h-[68px] sm:px-8">
         <Link href={`/${locale}`} className="flex shrink-0 items-center gap-2.5 text-lg font-semibold tracking-tight">
           <span className="size-2.5 rounded-full bg-accent" aria-hidden />
           {dict.brand}

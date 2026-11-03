@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import { notFound } from "next/navigation";
 import { Analytics } from "@/components/analytics";
+import { AnchorScroll } from "@/components/anchor-scroll";
 import { ChatWidget } from "@/components/chat/chat-widget";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
@@ -71,6 +72,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
         <main id="main">{children}</main>
         <Footer locale={locale} dict={dict} />
         <ChatWidget locale={locale} dict={dict.chat} />
+        <AnchorScroll />
         <OfflineStatus locale={locale} dict={dict.offline} />
         <ServiceWorkerRegister />
         {process.env.NEXT_PUBLIC_VERCEL_ENV && <Analytics />}

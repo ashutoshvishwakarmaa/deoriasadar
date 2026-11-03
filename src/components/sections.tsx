@@ -305,7 +305,7 @@ export function EmergencySection({ locale, dict, standalone }: SectionProps) {
     >
       <Container className="py-[88px]">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <div className="flex items-center gap-3.5">
+          <div className="flex flex-wrap items-center gap-3.5">
             <Heading className="section-title">{dict.sections.emergency}</Heading>
             <span className="rounded-full bg-accent px-3 py-[5px] text-[11px] font-semibold tracking-[.08em] text-paper">
               24/7
