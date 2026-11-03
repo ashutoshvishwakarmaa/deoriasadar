@@ -75,6 +75,14 @@ async function probe(url) {
 
 /** Check a link with retries. Status: "ok", "warning" (429 or timeout — often transient) or "broken". */
 export async function checkUrl(url) {
+  const result = await attempt(url);
+  // Applied to every outcome, including the early exit for a 403/404 that is not retried.
+  if (result.status === "broken" && refusesAutomatedChecks(url))
+    return { ...result, status: "warning", note: "site refuses automated checks" };
+  return result;
+}
+
+async function attempt(url) {
   let last;
   for (let attempt = 0; attempt <= RETRIES; attempt++) {
     try {
@@ -90,8 +98,6 @@ export async function checkUrl(url) {
       last = { url, status: timedOut ? "warning" : "broken", code: timedOut ? "timeout" : cause };
     }
   }
-  if (last.status === "broken" && refusesAutomatedChecks(url))
-    return { ...last, status: "warning", note: "site refuses automated checks" };
   return last;
 }
 

@@ -1,6 +1,6 @@
 import path from "node:path";
-import { describe, expect, it } from "vitest";
-import { refusesAutomatedChecks, collectUrls, readDataFiles } from "../scripts/check-links.mjs";
+import { afterEach, describe, expect, it, vi } from "vitest";
+import { checkUrl, collectUrls, readDataFiles, refusesAutomatedChecks } from "../scripts/check-links.mjs";
 
 describe("check-links URL collection", () => {
   it("finds URLs in any field, at any depth, and de-duplicates them", () => {
@@ -50,5 +50,15 @@ describe("check-links URL collection", () => {
     expect(refusesAutomatedChecks("https://linkedin.com/in/someone")).toBe(true);
     expect(refusesAutomatedChecks("https://deoria.nic.in/")).toBe(false);
     expect(refusesAutomatedChecks("https://notirctc.co.in.example.com/")).toBe(false);
+  });
+});
+
+describe("check-links status", () => {
+  afterEach(() => vi.unstubAllGlobals());
+
+  it("reports a refused check on a listed site as a warning, and the same status elsewhere as broken", async () => {
+    vi.stubGlobal("fetch", async () => new Response(null, { status: 403 }));
+    expect(await checkUrl("https://www.irctc.co.in/")).toMatchObject({ status: "warning", code: 403 });
+    expect(await checkUrl("https://example.org/")).toMatchObject({ status: "broken", code: 403 });
   });
 });
