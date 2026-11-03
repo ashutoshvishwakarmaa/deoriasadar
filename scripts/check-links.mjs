@@ -13,11 +13,12 @@ const TIMEOUT_MS = 15_000;
 const RETRIES = 1;
 const CONCURRENCY = 4;
 const URL_PATTERN = /https?:\/\/[^\s"'<>]+/g;
+const REFUSES_AUTOMATED_CHECKS = ["data.gov.in", "indianrail.gov.in", "irctc.co.in", "linkedin.com"];
+export function refusesAutomatedChecks(url) {
+  const host = new URL(url).hostname;
+  return REFUSES_AUTOMATED_CHECKS.some((h) => host === h || host.endsWith(`.${h}`));
+}
 
-/**
- * Collect unique external URLs from parsed content files, with the places each one is used.
- * `files` maps a file name to its parsed JSON; returns `[{ url, refs: ["sources.json[0].url", …] }]` in first-seen order.
- */
 export function collectUrls(files) {
   const found = new Map();
   const add = (url, ref) => {
@@ -84,11 +85,13 @@ export async function checkUrl(url) {
       // Retry only what might succeed on a second try.
       if (status !== 429 && status < 500) return last;
     } catch (error) {
-      const timedOut = error?.name === "TimeoutError" || error?.name === "AbortError";
       const cause = error?.cause?.code ?? error?.cause?.message ?? error?.message;
+      const timedOut = error?.name === "TimeoutError" || error?.name === "AbortError" || cause === "UND_ERR_CONNECT_TIMEOUT";
       last = { url, status: timedOut ? "warning" : "broken", code: timedOut ? "timeout" : cause };
     }
   }
+  if (last.status === "broken" && refusesAutomatedChecks(url))
+    return { ...last, status: "warning", note: "site refuses automated checks" };
   return last;
 }
 
@@ -116,6 +119,7 @@ async function main() {
   for (const [i, r] of results.entries()) {
     console.log(`${label[r.status]}  ${String(r.code).padEnd(12)}  ${r.url}`);
     if (r.redirected) console.log(`${" ".repeat(20)}→ ${r.redirected}`);
+    if (r.note) console.log(`${" ".repeat(20)}(${r.note})`);
     if (r.status !== "ok") console.log(`${" ".repeat(20)}used in ${links[i].refs.join(", ")}`);
   }
 

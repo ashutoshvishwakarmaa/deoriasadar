@@ -1,6 +1,6 @@
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { collectUrls, readDataFiles } from "../scripts/check-links.mjs";
+import { refusesAutomatedChecks, collectUrls, readDataFiles } from "../scripts/check-links.mjs";
 
 describe("check-links URL collection", () => {
   it("finds URLs in any field, at any depth, and de-duplicates them", () => {
@@ -41,5 +41,14 @@ describe("check-links URL collection", () => {
     // Photos share licence URLs, so the input has repeats; each URL must still be reported once.
     expect(new Set(expected).size).toBeLessThan(expected.length);
     expect(links.length).toBe(urls.size);
+  });
+
+  it("treats only the listed hosts as refusing automated checks", () => {
+    expect(refusesAutomatedChecks("https://www.irctc.co.in/")).toBe(true);
+    expect(refusesAutomatedChecks("https://enquiry.indianrail.gov.in/mntes/")).toBe(true);
+    expect(refusesAutomatedChecks("https://data.gov.in/sites/default/files/x.pdf")).toBe(true);
+    expect(refusesAutomatedChecks("https://linkedin.com/in/someone")).toBe(true);
+    expect(refusesAutomatedChecks("https://deoria.nic.in/")).toBe(false);
+    expect(refusesAutomatedChecks("https://notirctc.co.in.example.com/")).toBe(false);
   });
 });
