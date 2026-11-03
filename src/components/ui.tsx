@@ -50,7 +50,7 @@ export function CityPhoto({
     <figure className={`relative m-0 overflow-hidden ${contain ? "bg-paper-2" : "bg-sand"} ${className}`}>
       {/* Logos and emblems sit centred with breathing room, clear of the credit pill. */}
       {contain ? <div className="absolute inset-x-6 top-5 bottom-10">{image}</div> : image}
-      <figcaption className="absolute right-2 bottom-2 max-w-[calc(100%-1rem)] truncate rounded-full bg-ink/55 px-2.5 text-[10px] leading-6 text-paper backdrop-blur-sm">
+      <figcaption className="absolute right-2 bottom-2 max-w-[calc(100%-1rem)] truncate rounded-full bg-ink/70 px-2.5 text-[10px] leading-6 text-paper backdrop-blur-sm">
         {linkCredit ? (
           <a href={photo.sourceUrl} target="_blank" rel="noopener noreferrer license" className="block truncate hover:underline">
             {credit}

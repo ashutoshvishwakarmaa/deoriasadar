@@ -14,6 +14,7 @@
     "emergency": "Emergency",
     "culture": "Culture",
     "gallery": "Gallery",
+    "me": "About me",
     "about": "About this guide",
     "menu": "Menu",
     "close": "Close",
@@ -117,6 +118,17 @@
       "success": "Thank you. An editor will review your correction.",
       "error": "Could not send right now. Please try again in a minute."
     }
+  },
+  "creator": {
+    "kicker": "Made by",
+    "title": "Who made this guide",
+    "link": "Who made this guide",
+    "intro": "The Deoria Guide is built and maintained by one person from Deoria.",
+    "fromDeoria": "From Deoria",
+    "experience": "Experience",
+    "contact": "Contact",
+    "call": "Call",
+    "email": "Email"
   },
   "footer": {
     "sourced": "Content sourced from public records. Last verified 28 Sep 2026.",

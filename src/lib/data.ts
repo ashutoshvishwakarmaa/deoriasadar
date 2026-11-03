@@ -8,9 +8,11 @@ import emergencyJson from "@/data/emergency.json";
 import audiencesJson from "@/data/audiences.json";
 import sourcesJson from "@/data/sources.json";
 import photosJson from "@/data/photos.json";
+import creatorJson from "@/data/creator.json";
 import {
   audienceSchema,
   citySchema,
+  creatorSchema,
   emergencySchema,
   officialSchema,
   personSchema,
@@ -38,6 +40,7 @@ export const emergencyNumbers = parse(z.array(emergencySchema), emergencyJson, "
 export const audiences = parse(z.array(audienceSchema), audiencesJson, "audiences.json");
 export const sources = parse(z.array(sourceSchema), sourcesJson, "sources.json");
 export const photos = parse(z.array(photoSchema), photosJson, "photos.json");
+export const creator = parse(creatorSchema, creatorJson, "creator.json");
 
 // Cross-file integrity checks: unique slugs and resolvable source ids.
 {

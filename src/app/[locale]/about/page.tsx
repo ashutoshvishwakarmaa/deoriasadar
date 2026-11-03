@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { CorrectionForm } from "@/components/correction-form";
 import { Container, PageIntro } from "@/components/ui";
 import { photos, sources } from "@/lib/data";
@@ -15,7 +16,15 @@ export default async function Page({ params }: PageProps<"/[locale]/about">) {
   return (
     <>
       <JsonLd data={[breadcrumbs(locale, [{ name: dict.nav.about, path: `/${locale}/about` }])]} />
-      <PageIntro title={dict.about.title}>{dict.about.intro}</PageIntro>
+      <PageIntro title={dict.about.title}>
+        {dict.about.intro}
+        <Link
+          href={`/${locale}/about/creator`}
+          className="mt-4 flex min-h-6 w-fit items-center font-medium text-accent hover:underline"
+        >
+          {dict.creator.link} →
+        </Link>
+      </PageIntro>
       <Container className="grid gap-16 pt-14 lg:grid-cols-2">
         <section>
           <h2 className="text-2xl font-semibold tracking-[-.03em]">{dict.about.sources}</h2>

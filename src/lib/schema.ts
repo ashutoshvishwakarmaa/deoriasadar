@@ -139,3 +139,29 @@ export const sourceSchema = z.object({
   url: z.url(),
   usedFor: z.string(),
 });
+
+/** The person who builds and maintains the guide (src/data/creator.json). */
+export const creatorSchema = z.object({
+  name: localized,
+  photo: z.object({ src: z.string().startsWith("/"), width: z.number().int(), height: z.number().int() }),
+  role: localized,
+  bio: z.array(localized).min(1),
+  deoria: z.object({ intro: localized, points: z.array(localized) }),
+  experience: z.array(
+    z.object({
+      title: localized,
+      org: z.string().min(1),
+      url: z.url().optional(),
+      place: localized,
+      period: localized,
+      summary: localized,
+      points: z.array(localized).optional(),
+    }),
+  ),
+  contact: z.object({
+    phone: z.string().regex(/^\+[0-9]{8,15}$/),
+    phoneDisplay: z.string().min(1),
+    email: z.email(),
+    links: z.array(z.object({ label: z.string().min(1), url: z.url() })),
+  }),
+});

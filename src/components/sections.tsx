@@ -256,7 +256,12 @@ export function TransportSection({ locale, dict, standalone }: SectionProps) {
                       <span>
                         {t(d, locale)}{" "}
                         {d.source ? (
-                          <a href={d.source} target="_blank" rel="noopener noreferrer" className="text-[11px] text-accent hover:underline">
+                          <a
+                            href={d.source}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[11px] text-accent hover:underline"
+                          >
                             [{dict.officialPopup.source}]
                           </a>
                         ) : (

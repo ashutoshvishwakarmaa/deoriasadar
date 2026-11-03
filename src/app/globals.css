@@ -76,8 +76,10 @@
 }
 /*
  * Opening a #section link: render everything normally, or the jump would aim at estimated
- * heights and land in the wrong place. The flag is set by the inline script in layout.tsx.
+ * heights and land in the wrong place. :target matches as soon as the linked section is parsed,
+ * and again after in-page hash changes. [data-anchor] lets tests force the same state.
  */
+html:has(:target) .render-on-demand,
 html[data-anchor] .render-on-demand {
   content-visibility: visible;
 }

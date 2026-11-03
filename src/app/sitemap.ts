@@ -14,6 +14,7 @@ const PAGES = [
   "/culture",
   "/gallery",
   "/about",
+  "/about/creator",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

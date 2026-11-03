@@ -1,0 +1,168 @@
+{
+  "name": {
+    "en": "Ashutosh Vishwakarma",
+    "hi": "आशुतोष विश्वकर्मा"
+  },
+  "photo": {
+    "src": "/images/creator-ashutosh.png",
+    "width": 480,
+    "height": 480
+  },
+  "role": {
+    "en": "AI/ML Engineer · Blackcoat.ai, Gurgaon",
+    "hi": "एआई/एमएल इंजीनियर · Blackcoat.ai, गुड़गांव"
+  },
+  "bio": [
+    {
+      "en": "I'm an AI engineer who loves turning scattered, real-world information into tools people can trust. For me, good AI isn't about flashy demos. It's about giving the right answer, showing where that answer came from, and working reliably every single day.",
+      "hi": "मैं एक एआई इंजीनियर हूँ, जिसे बिखरी हुई असली दुनिया की जानकारी को ऐसे टूल में बदलना अच्छा लगता है जिन पर लोग भरोसा कर सकें। मेरे लिए अच्छा एआई दिखावटी डेमो नहीं है। अच्छा एआई वह है जो सही जवाब दे, बताए कि जवाब कहाँ से आया, और हर दिन भरोसे के साथ काम करे।"
+    },
+    {
+      "en": "Most of my work is building smart search over large collections of documents, AI assistants that can research a question step by step, and automations that take repetitive work off people's hands.",
+      "hi": "मेरा ज़्यादातर काम बड़े दस्तावेज़ संग्रहों पर समझदार सर्च बनाना, ऐसे एआई सहायक बनाना जो किसी सवाल पर कदम-दर-कदम शोध कर सकें, और ऐसे ऑटोमेशन बनाना है जो लोगों का दोहराव वाला काम अपने हाथ में ले लें।"
+    },
+    {
+      "en": "Deoria is my home. I built this guide because simple, trustworthy information about the city was hard to find in one place. That's why every fact here shows its source and the date it was last checked.",
+      "hi": "देवरिया मेरा घर है। मैंने यह गाइड इसलिए बनाई क्योंकि शहर के बारे में आसान और भरोसेमंद जानकारी एक जगह मिलना मुश्किल था। इसीलिए यहाँ हर जानकारी के साथ उसका स्रोत और आख़िरी बार जाँच की तारीख़ दिखती है।"
+    }
+  ],
+  "deoria": {
+    "intro": {
+      "en": "Grew up and studied in Deoria.",
+      "hi": "देवरिया में पला-बढ़ा और पढ़ा।"
+    },
+    "points": [
+      {
+        "en": "High school from St. Paul Public School (2015–2017)",
+        "hi": "हाई स्कूल, सेंट पॉल पब्लिक स्कूल से (2015–2017)"
+      },
+      {
+        "en": "Higher secondary from Seva Shram Sikshan Sanshthan Inter College (2018–2020)",
+        "hi": "इंटरमीडिएट, सेवा श्रम शिक्षण संस्थान इंटर कॉलेज से (2018–2020)"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "title": {
+        "en": "AI/ML Engineer",
+        "hi": "एआई/एमएल इंजीनियर"
+      },
+      "org": "Blackcoat.ai",
+      "place": {
+        "en": "Gurgaon, Haryana",
+        "hi": "गुड़गांव, हरियाणा"
+      },
+      "period": {
+        "en": "Jan 2026 – Present",
+        "hi": "जनवरी 2026 – वर्तमान"
+      },
+      "summary": {
+        "en": "I'm one of the core founding engineers, building AI that makes Indian law easy to find and understand.",
+        "hi": "मैं कोर फ़ाउंडिंग इंजीनियरों में से एक हूँ, ऐसा एआई बना रहा हूँ जिससे भारतीय कानून खोजना और समझना आसान हो।"
+      },
+      "points": [
+        {
+          "en": "Organising court judgments into a searchable legal library.",
+          "hi": "अदालती फ़ैसलों को खोजने लायक एक कानूनी लाइब्रेरी में व्यवस्थित करना।"
+        },
+        {
+          "en": "Building AI search and assistants for legal research and drafting.",
+          "hi": "कानूनी शोध और ड्राफ़्टिंग के लिए एआई सर्च और सहायक बनाना।"
+        },
+        {
+          "en": "Linking India's new criminal laws to the old ones they replaced.",
+          "hi": "भारत के नए आपराधिक कानूनों को उन पुराने कानूनों से जोड़ना जिनकी जगह वे आए हैं।"
+        }
+      ],
+      "url": "https://blackcoat.ai"
+    },
+    {
+      "title": {
+        "en": "Jr Python Developer",
+        "hi": "जूनियर पायथन डेवलपर"
+      },
+      "org": "Excellence Technologies",
+      "place": {
+        "en": "Noida, Uttar Pradesh",
+        "hi": "नोएडा, उत्तर प्रदेश"
+      },
+      "period": {
+        "en": "Jun 2025 – Dec 2025",
+        "hi": "जून 2025 – दिसंबर 2025"
+      },
+      "summary": {
+        "en": "Built AI-powered systems and automations for clients across many industries.",
+        "hi": "कई तरह के उद्योगों के क्लाइंट्स के लिए एआई सिस्टम और ऑटोमेशन बनाए।"
+      },
+      "url": "https://excellencetechnologies.in",
+      "points": [
+        {
+          "en": "Built backend services and AI sub-agents that made clients' AI applications faster and more reliable.",
+          "hi": "बैकएंड सेवाएँ और एआई सब-एजेंट बनाए, जिनसे क्लाइंट्स के एआई एप्लिकेशन तेज़ और ज़्यादा भरोसेमंद बने।"
+        },
+        {
+          "en": "Designed automation workflows for many clients, handling onboarding, approvals, AI content and reports.",
+          "hi": "कई क्लाइंट्स के लिए ऑटोमेशन वर्कफ़्लो बनाए, जो ऑनबोर्डिंग, अप्रूवल, एआई कंटेंट और रिपोर्ट संभालते हैं।"
+        },
+        {
+          "en": "Added retries and fallbacks so these automations kept running smoothly in production.",
+          "hi": "रीट्राई और फ़ॉलबैक जोड़े, ताकि ये ऑटोमेशन प्रोडक्शन में बिना रुकावट चलते रहें।"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Software Developer Intern (AI)",
+        "hi": "सॉफ़्टवेयर डेवलपर इंटर्न (एआई)"
+      },
+      "org": "Jobma",
+      "place": {
+        "en": "Gurgaon, Haryana",
+        "hi": "गुड़गांव, हरियाणा"
+      },
+      "period": {
+        "en": "Jan 2025 – Jun 2025",
+        "hi": "जनवरी 2025 – जून 2025"
+      },
+      "summary": {
+        "en": "My first job, where I learned how real AI products are built and shipped.",
+        "hi": "मेरी पहली नौकरी, जहाँ मैंने सीखा कि असली एआई प्रोडक्ट कैसे बनते और लॉन्च होते हैं।"
+      },
+      "url": "https://www.jobma.com",
+      "points": [
+        {
+          "en": "Built an AI recommendation system that matched candidate profiles to the right opportunities.",
+          "hi": "एक एआई रिकमेंडेशन सिस्टम बनाया, जो उम्मीदवारों की प्रोफ़ाइल को सही अवसरों से मिलाता है।"
+        },
+        {
+          "en": "Prepared and cleaned profile data, then trained and tested machine-learning models.",
+          "hi": "प्रोफ़ाइल डेटा तैयार और साफ़ किया, फिर मशीन-लर्निंग मॉडल ट्रेन और टेस्ट किए।"
+        },
+        {
+          "en": "Turned the models into live APIs so the product could use predictions in real time.",
+          "hi": "मॉडल को लाइव API में बदला, ताकि प्रोडक्ट रियल टाइम में उनके नतीजे इस्तेमाल कर सके।"
+        }
+      ]
+    }
+  ],
+  "contact": {
+    "phone": "+918881619966",
+    "phoneDisplay": "+91 88816 19966",
+    "email": "ashusharma3535@gmail.com",
+    "links": [
+      {
+        "label": "Portfolio",
+        "url": "https://ashutoshvishwakarma.vercel.app"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://linkedin.com/in/ashutoshvishwakarmaa"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/ashutoshvishwakarmaa"
+      }
+    ]
+  }
+}

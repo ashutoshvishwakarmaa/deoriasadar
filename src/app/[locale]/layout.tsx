@@ -18,8 +18,6 @@ const poppins = Poppins({
   display: "swap",
 });
 
-const anchorScript = `(function(){var d=document.documentElement;function f(){if(location.hash.length>1)d.setAttribute("data-anchor","")}f();addEventListener("hashchange",f)})()`;
-
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
@@ -61,12 +59,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
 
   return (
     // data-scroll-behavior lets Next.js turn smooth scrolling (globals.css) off during page changes.
-    // suppressHydrationWarning: the head script below may add data-anchor before React hydrates.
-    <html lang={locale} className={poppins.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
-      <head>
-        {/* Runs before the body is parsed, so a #section link scrolls to fully rendered sections (globals.css). */}
-        <script dangerouslySetInnerHTML={{ __html: anchorScript }} />
-      </head>
+    <html lang={locale} className={poppins.variable} data-scroll-behavior="smooth">
       <body className="min-h-dvh">
         <a
           href="#main"

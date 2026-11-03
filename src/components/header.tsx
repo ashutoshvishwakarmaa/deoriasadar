@@ -5,7 +5,10 @@ import { usePathname } from "next/navigation";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import type { Dictionary, Locale } from "@/lib/i18n";
 
-const NAV_KEYS = ["explore", "history", "people", "governance", "transport", "map", "emergency", "gallery"] as const;
+const NAV_KEYS = ["explore", "history", "people", "governance", "transport", "map", "emergency", "gallery", "me"] as const;
+
+/** Most links go to /{locale}/{key}; "me" is the creator page. */
+const pathFor = (key: string) => (key === "me" ? "about/creator" : key);
 
 export function Header({ locale, dict }: { locale: Locale; dict: Pick<Dictionary, "brand" | "nav"> }) {
   const pathname = usePathname();
@@ -15,7 +18,8 @@ export function Header({ locale, dict }: { locale: Locale; dict: Pick<Dictionary
   const [indicator, setIndicator] = useState({ left: 0, width: 0, visible: false });
 
   const segment = pathname.split("/")[2] ?? "";
-  const active = (NAV_KEYS as readonly string[]).includes(segment) ? segment : null;
+  const onCreator = pathname.endsWith("/about/creator");
+  const active = onCreator ? "me" : (NAV_KEYS as readonly string[]).includes(segment) ? segment : null;
   const otherLocale: Locale = locale === "en" ? "hi" : "en";
   const switchHref = `/${otherLocale}${pathname.slice(locale.length + 1)}`;
 
@@ -63,13 +67,13 @@ export function Header({ locale, dict }: { locale: Locale; dict: Pick<Dictionary
         <nav
           ref={navRef}
           aria-label="Main"
-          className="relative hidden flex-1 self-stretch gap-[clamp(12px,1.6vw,22px)] text-sm whitespace-nowrap lg:flex"
+          className="relative hidden flex-1 justify-center self-stretch gap-[clamp(12px,1.6vw,22px)] text-sm whitespace-nowrap lg:flex"
         >
           {NAV_KEYS.map((key) => (
             <Link
               key={key}
               data-key={key}
-              href={`/${locale}/${key}`}
+              href={`/${locale}/${pathFor(key)}`}
               aria-current={active === key ? "page" : undefined}
               className={`flex items-center transition-colors hover:text-ink ${active === key ? "font-semibold text-ink" : "text-muted"}`}
             >
@@ -128,17 +132,20 @@ export function Header({ locale, dict }: { locale: Locale; dict: Pick<Dictionary
       {open && (
         <nav id="mobile-nav" aria-label="Main" className="border-t border-ink/10 px-4 pb-5 sm:px-8 lg:hidden">
           <ul className="grid grid-cols-2 gap-1 pt-3">
-            {[...NAV_KEYS, "culture" as const, "about" as const].map((key) => (
-              <li key={key}>
-                <Link
-                  href={`/${locale}/${key}`}
-                  aria-current={segment === key ? "page" : undefined}
-                  className={`block rounded-lg px-3 py-2.5 text-[15px] ${segment === key ? "bg-ink/5 font-semibold" : "text-muted"}`}
-                >
-                  {dict.nav[key]}
-                </Link>
-              </li>
-            ))}
+            {[...NAV_KEYS, "culture" as const, "about" as const].map((key) => {
+              const current = key === "me" ? onCreator : segment === key && !onCreator;
+              return (
+                <li key={key}>
+                  <Link
+                    href={`/${locale}/${pathFor(key)}`}
+                    aria-current={current ? "page" : undefined}
+                    className={`block rounded-lg px-3 py-2.5 text-[15px] ${current ? "bg-ink/5 font-semibold" : "text-muted"}`}
+                  >
+                    {dict.nav[key]}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
       )}
